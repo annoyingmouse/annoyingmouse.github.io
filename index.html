@@ -46,14 +46,15 @@
             $(function(){
                 $.ajax({
                     dataType: "json",
-                    url: "https://spreadsheets.google.com/feeds/list/0AiRgQIhodQXfdGZ5OV9INlNRME9YUnc2VUhmRGtPaVE/od7/public/values?alt=json",
+                    url: "https://spreadsheets.google.com/feeds/list/0AiRgQIhodQXfdGZ5OV9INlNRME9YUnc2VUhmRGtPaVE/od9/public/values?alt=json",
                     success: function(data){
                         $.each(data.feed.entry, function(k, v){
                             var post = {};
                             post.id = parseInt(v.gsx$id.$t);
                             post.date = v.gsx$date.$t;
                             post.title = v.gsx$title.$t;
-                            post.content = Base64.decode(v.gsx$content.$t);
+                            //post.content = Base64.decode(v.gsx$content.$t);
+                            post.content = v.gsx$content.$t;
                             post.link = encodeURI(v.gsx$title.$t);
                             post.pubdate = createDateStamp(v.gsx$date.$t);
                             posts.push(post);
