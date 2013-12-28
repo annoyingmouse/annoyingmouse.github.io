@@ -1,0 +1,22 @@
+body{
+  background-color:#000000;}
+.middle{
+  margin: 10px solid black;
+  position:absolute;
+  left:50%;
+  top:50%;
+  margin-top:-161px;
+  margin-left:-119px;
+  width:238px;
+  height:323px;
+  background-image:url("../img/15.gif");}
+.IEisPants{
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:238px;
+  height:20px;
+  background-color:#000000;
+  margin-left:-119px;
+  margin-top:161px;}
+

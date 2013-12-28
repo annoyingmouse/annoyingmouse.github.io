@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Magda's CSV parser thingie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Magda's CSV parser thingie"/>
+    <meta name="author" content="Dominic Myers"/>
+    <link href="../css/bootstrap.css" rel="stylesheet"/>
+    <link href="../css/bootstrap-responsive.css" rel="stylesheet"/>
+    <link href="../css/jquery-ui-1.9.2.custom.css" rel="stylesheet"/>
+    <style>
+        body {
+            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        }
+        .total {
+            text-align: right;
+            font-weight: bold;
+        }
+        @media all {
+            .page-break  { display: none; }
+        }
+
+        @media print {
+            .page-break  { display: block; page-break-before: always; }
+        }
+    </style>
+    <!--[if lt IE 9]>
+    <script src="./resources/js/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="http://drmsite.com">DRMSite</a>
+                <div class="nav-collapse">
+                    <ul class="nav" id="siteLinks"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="tabbable">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#CSV" data-toggle="tab">CSV</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Courses <b class="caret"></b></a>
+                <ul class="dropdown-menu" id="subjects"></ul>
+            </li>
+            <li><a href="#plain" data-toggle="tab">All in one</a></li>
+        </ul>
+        <div class="tab-content" id="details">
+            <div class="tab-pane active" id="CSV">
+                <textarea class="span12" rows="30" id="csvHolder" placeholder="Paste CSV here"></textarea>
+                <button class="pull-right" id="doStuff">Process CSV</button>
+            </div>
+            <div class="tab-pane" id="plain">
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/jquery.js"></script>
+<script src="../js/jquery-migrate-1.0.0.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script src="../js/jquery-ui-1.9.2.custom.js"></script>
+<script src="../js/vars.js"></script>
+<script src="../js/functions.js"></script>
+
+<script src="../js/jquery.csv-0.71.js"></script>
+<script src="../js/jsrender.js"></script>
+<script>
+    $(function(){
+        var subjects = [];
+        $("#doStuff").on("click", function(){
+            var result = $.csv.toObjects($("#csvHolder").val());
+            $.each(result, function(k, v){
+                if($.inArray(v.ElectiveChoice1, subjects) === -1 && !empty(v.AuditChoice)){
+                    subjects.push(v.ElectiveChoice1)
+                }
+                if($.inArray(v.ElectiveChoice2, subjects) === -1 && !empty(v.AuditChoice)){
+                    subjects.push(v.ElectiveChoice2)
+                }
+                if($.inArray(v.ElectiveChoice3, subjects) === -1 && !empty(v.AuditChoice)){
+                    subjects.push(v.ElectiveChoice3)
+                }
+                if($.inArray(v.AuditChoice, subjects) === -1 && !empty(v.AuditChoice)){
+                    subjects.push(v.AuditChoice)
+                }
+            });
+            $.each(subjects, function(k,v){
+                $("#subjects").append($("#addLi").render({"a":k,"b":v}));
+                $("#details").append($("#addDiv").render({"a":k,"b":v}))
+                $("#plain").append($("#addPlain").render({"a":k,"b":v}))
+            });
+            $.each(result, function(k, v){
+                $("#tab"+$.inArray(v.ElectiveChoice1, subjects)+" table.choice tbody").append($("#addStudent").render(v));
+                $("#tab"+$.inArray(v.ElectiveChoice1, subjects)+" .totalChoice").html(parseInt($("#tab"+$.inArray(v.ElectiveChoice1, subjects)+" .totalChoice").html()) + 1);
+                $("#tab"+$.inArray(v.ElectiveChoice2, subjects)+" table.choice tbody").append($("#addStudent").render(v));
+                $("#tab"+$.inArray(v.ElectiveChoice2, subjects)+" .totalChoice").html(parseInt($("#tab"+$.inArray(v.ElectiveChoice2, subjects)+" .totalChoice").html()) + 1);
+                $("#tab"+$.inArray(v.ElectiveChoice3, subjects)+" table.choice tbody").append($("#addStudent").render(v));
+                $("#tab"+$.inArray(v.ElectiveChoice3, subjects)+" .totalChoice").html(parseInt($("#tab"+$.inArray(v.ElectiveChoice3, subjects)+" .totalChoice").html()) + 1);
+                $("#tab"+$.inArray(v.AuditChoice, subjects)+" table.audit tbody").append($("#addStudent").render(v));
+                $("#tab"+$.inArray(v.AuditChoice, subjects)+" .totalAudit").html(parseInt($("#tab"+$.inArray(v.AuditChoice, subjects)+" .totalAudit").html()) + 1);
+
+                $("#plain"+$.inArray(v.ElectiveChoice1, subjects)+" table.choice tbody").append($("#addPlainStudent").render(v));
+                $("#plain"+$.inArray(v.ElectiveChoice1, subjects)+" .totalChoice").html(parseInt($("#plain"+$.inArray(v.ElectiveChoice1, subjects)+" .totalChoice").html()) + 1);
+                $("#plain"+$.inArray(v.ElectiveChoice2, subjects)+" table.choice tbody").append($("#addPlainStudent").render(v));
+                $("#plain"+$.inArray(v.ElectiveChoice2, subjects)+" .totalChoice").html(parseInt($("#plain"+$.inArray(v.ElectiveChoice2, subjects)+" .totalChoice").html()) + 1);
+                $("#plain"+$.inArray(v.ElectiveChoice3, subjects)+" table.choice tbody").append($("#addPlainStudent").render(v));
+                $("#plain"+$.inArray(v.ElectiveChoice3, subjects)+" .totalChoice").html(parseInt($("#plain"+$.inArray(v.ElectiveChoice3, subjects)+" .totalChoice").html()) + 1);
+                $("#plain"+$.inArray(v.AuditChoice, subjects)+" table.audit tbody").append($("#addPlainStudent").render(v));
+                $("#plain"+$.inArray(v.AuditChoice, subjects)+" .totalAudit").html(parseInt($("#plain"+$.inArray(v.AuditChoice, subjects)+" .totalAudit").html()) + 1);
+            });
+            $("#subjects li").sortElements(function(a, b){
+                return $(a).text() > $(b).text() ? 1 : -1;
+            });
+            $(".tab-plane").sortElements(function(a, b){
+                return $(a).find("h1").text() > $(b).find("h1").text() ? 1 : -1;
+            });
+            $("#doStuff").attr("disabled","disabled").html("Done!");
+        });
+    });
+    function empty(data) {
+        if (typeof (data) == 'undefined' || data == null || data == "null" || data == "") {
+            return true;
+        }
+        if (typeof (data) == 'number' || typeof (data) == 'boolean') {
+            return false;
+        }
+        if (typeof (data.length) != 'undefined') {
+            return data.length == 0;
+        }
+        var count = 0;
+        for (var i in data) {
+            if (data.hasOwnProperty(i)) {
+                count++;
+            }
+        }
+        return count == 0;
+    }
+    /**
+     * jQuery.fn.sortElements
+     * --------------
+     * @param Function comparator:
+     *   Exactly the same behaviour as [1,2,3].sort(comparator)
+     *
+     * @param Function getSortable
+     *   A function that should return the element that is
+     *   to be sorted. The comparator will run on the
+     *   current collection, but you may want the actual
+     *   resulting sort to occur on a parent or another
+     *   associated element.
+     *
+     *   E.g. $('td').sortElements(comparator, function(){
+     *      return this.parentNode;
+     *   })
+     *
+     *   The <td>'s parent (<tr>) will be sorted instead
+     *   of the <td> itself.
+     */
+    jQuery.fn.sortElements = (function(){
+        var sort = [].sort;
+        return function(comparator, getSortable) {
+            getSortable = getSortable || function(){return this;};
+            var placements = this.map(function(){
+                var sortElement = getSortable.call(this),
+                        parentNode = sortElement.parentNode,
+                // Since the element itself will change position, we have
+                // to have some way of storing its original position in
+                // the DOM. The easiest way is to have a 'flag' node:
+                        nextSibling = parentNode.insertBefore(
+                                document.createTextNode(''),
+                                sortElement.nextSibling
+                        );
+                return function() {
+                    if (parentNode === this) {
+                        throw new Error(
+                                "You can't sort elements if any one is a descendant of another."
+                        );
+                    }
+                    // Insert before flag:
+                    parentNode.insertBefore(this, nextSibling);
+                    // Remove flag:
+                    parentNode.removeChild(nextSibling);
+                };
+            });
+            return sort.call(this, comparator).each(function(i){
+                placements[i].call(getSortable.call(this));
+            });
+        };
+    })();
+</script>
+<script id="addLi" type="x/js-render">
+    <li><a href="#tab{{:a}}" data-toggle="tab">{{:b}}</a></li>
+</script>
+<script id="addDiv" type="x/js-render">
+    <div class="tab-pane" id="tab{{:a}}">
+        <h1>{{:b}}</h1>
+        <h3>Main Choice</h3>
+        <table class="choice table table-striped table-bordered table-condensed">
+            <thead>
+            <tr>
+                <th width="50%">Name</th>
+                <th width="50%">Email</th>
+            </tr>
+            </thead>
+            <tfoot>
+            <tr>
+                <td class="total">Total:</td>
+                <td class="totalChoice">0</td>
+            </tr>
+            </tfoot>
+            <tbody></tbody>
+        </table>
+        <h3>Audit</h3>
+        <table class="audit table table-striped table-bordered table-condensed">
+            <thead>
+            <tr>
+                <th width="50%">Name</th>
+                <th width="50%">Email</th>
+            </tr>
+            </thead>
+            <tfoot>
+            <tr>
+                <td class="total">Total:</td>
+                <td class="totalAudit">0</td>
+            </tr>
+            </tfoot>
+            <tbody></tbody>
+        </table>
+    </div>
+</script>
+<script id="addPlain" type="x/js-render">
+    <div class="tab-plane" id="plain{{:a}}">
+        <h1>{{:b}}</h1>
+        <h3>Main Choice</h3>
+        <table class="choice table table-striped table-bordered table-condensed">
+            <thead>
+            <tr>
+                <th width="50%">Name</th>
+                <th width="50%">Email</th>
+            </tr>
+            </thead>
+            <tfoot>
+            <tr>
+                <td class="total">Total:</td>
+                <td class="totalChoice">0</td>
+            </tr>
+            </tfoot>
+            <tbody></tbody>
+        </table>
+        <h3>Audit</h3>
+        <table class="audit table table-striped table-bordered table-condensed">
+            <thead>
+            <tr>
+                <th width="50%">Name</th>
+                <th width="50%">Email</th>
+            </tr>
+            </thead>
+            <tfoot>
+            <tr>
+                <td class="total">Total:</td>
+                <td class="totalAudit">0</td>
+            </tr>
+            </tfoot>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div class="page-break"></div>
+</script>
+<script id="addStudent" type="x/js-render">
+    <tr>
+        <td>{{:Title}} ({{:CRSID}})</td>
+        <td><a href="mailto:{{:EmailAddress}}">{{:EmailAddress}}</a></td>
+    </tr>
+</script>
+<script id="addPlainStudent" type="x/js-render">
+    <tr>
+        <td>{{:Title}} ({{:CRSID}})</td>
+        <td>{{:EmailAddress}}</td>
+    </tr>
+</script>
+</body>
+</html>

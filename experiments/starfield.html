@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <title>Star Field</title>
+  </head>
+  <body style="background:#000000;" onresize="window.location.reload()" onload="if(document.getElementById)setInterval('fly()',40)">
+    <script type="text/javascript">
+      var SmallStars = 27;
+      var LargeStars = 3;
+      var SmallYpos = [];
+      var SmallXpos = [];
+      var LargeYpos = [];
+      var LargeXpos = [];
+      var Smallspeed = [];
+      var Largespeed = [];
+      document.write('<div style="position:absolute;top:0px;left:0px;"><div style="position:relative;">');
+      for (i = 0; i < SmallStars; i++){
+        document.write('<div id="si' + i + '" style="position:absolute;top:0;left:0;',
+          'width:1px;height:1px;background:#FFFFFF; font-size:1px;"></div>');
+      }
+      document.write('</div></div><div style="position:absolute;top:0;left:0;">',
+        '<div style="position:relative;">');
+      for (i = 0; i < LargeStars; i++) {
+        document.write('<div id="li' + i + '" style="position:absolute;top:0;left:0;',
+          'width:2px;height:2px;background:#FFFFFF;font-size:2px;"></div>');
+      }
+      document.write('</div></div>');
+      WinHeight = ('undefined' != typeof window.innerHeight)?window.innerHeight : document.body.clientHeight;
+      WinWidth = ('undefined' != typeof window.innerWidth)?window.innerWidth-5 : document.body.clientWidth-5;
+      for (i = 0; i < SmallStars; i++) {
+        SmallYpos[i] = Math.round(Math.random() * WinHeight);
+        SmallXpos[i] = Math.round(Math.random() * WinWidth);
+        Smallspeed[i]= Math.random() * 5 + 1;
+      }
+      for (i = 0; i < LargeStars; i++) {
+        LargeYpos[i] = Math.round(Math.random() * WinHeight);
+        LargeXpos[i] = Math.round(Math.random() * WinWidth);
+        Largespeed[i] = Math.random() * 10 + 5;
+      }
+      function fly() {
+        var hscrll = ('undefined' != typeof window.pageYOffset)?window.pageYOffset : document.body.scrollTop;
+        var wscrll = ('undefined' != typeof window.pageXOffset)?window.pageXOffset : document.body.scrollLeft;
+        for (i = 0; i < LargeStars; i++) {
+          LargeXpos[i] -= Largespeed[i];
+          if (LargeXpos[i] < -10) {
+            LargeXpos[i] = WinWidth;
+            LargeYpos[i] = Math.round(Math.random() * WinHeight);
+            Largespeed[i] = Math.random() * 10 + 5;
+          }
+        }
+        i = 0;
+        while (li = document.getElementById('li' + i)) {
+          li.style.left = LargeXpos[i] + 'px';
+          li.style.top = LargeYpos[i++] + hscrll + 'px';
+        }
+        for (i = 0; i < SmallStars; i++) {
+          SmallXpos[i] -= Smallspeed[i];
+          if (SmallXpos[i] < -10) {
+            SmallXpos[i] = WinWidth;
+            SmallYpos[i] = Math.round(Math.random()*WinHeight);
+            Smallspeed[i] = Math.random() * 5 + 1;
+          }
+        }
+        i = 0;
+        while (si = document.getElementById('si' + i)) {
+          si.style.left = SmallXpos[i] + 'px';
+          si.style.top = SmallYpos[i++] + hscrll + 'px';
+        }
+      }
+    </script>
+  </body>
+</html>
+

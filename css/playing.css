@@ -1,0 +1,40 @@
+body{
+  font:family: monospace;
+  font-size: 0.75em;
+}
+table{
+	text-align: center;
+	width: 100%;
+	background-color: #000000;
+}
+*.cellButton{
+	background-color: #FFFFFF;
+	color: #000000;
+	border: #FFFFFF 0px solid;
+	cursor: default;
+	vertical-align: middle;
+	font-weight: bold;
+	text-align: center;
+	font-size: larger;
+  width:5%;
+}
+*.cellButton2{
+	background-color: #000000;
+	color: #FFFFFF;
+	border: #000000 0px solid;
+	cursor: pointer;
+	vertical-align: middle;
+	font-weight: bold;
+	text-align: center;
+	font-size: larger;
+  width:5%;
+}
+td.blank{
+	vertical-align: middle;
+	font-weight: bold;
+	text-align: center;
+	font-family: Monospace;
+	background-color: #FFFFFF;
+  width:5%;
+
+}

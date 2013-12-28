@@ -1,0 +1,48 @@
+<html xmlns:time="urn:schemas-microsoft-com:time">
+  <head>
+    <?import namespace="time" implementation="#default#time2">
+    <style>
+      .time {behavior: url(#default#time2)}
+    </style>
+  </head>
+  <body>
+    <time:transitionfilter targetelement="first" type="fade" mode="in" begin="first.begin" dur="1s"/>
+    <time:transitionfilter targetelement="first" type="fade" mode="out" begin="first.begin+1s" dur="1s"/>
+    <time:transitionfilter targetelement="second" type="fade" mode="in" begin="second.begin" dur="1s"/>
+    <time:transitionfilter targetelement="second" type="fade" mode="out" begin="second.begin+1s" dur="1s"/>
+    <time:transitionfilter targetelement="third" type="fade" mode="in" begin="third.begin" dur="1s"/>
+    <time:transitionfilter targetelement="third" type="fade" mode="out" begin="third.begin+1s" dur="1s"/>
+    <time:transitionfilter targetelement="forth" type="fade" mode="in" begin="forth.begin" dur="1s"/>
+    <time:transitionfilter targetelement="forth" type="fade" mode="out" begin="forth.begin+1s" dur="1s"/>
+    <time:seq repeatCount="indefinite">
+      <time:par>
+        <div style="position: absolute; top: 70px; left: 260px;">
+          <img id="first" class="time" timeAction="display" src="../img/pic01.jpg" begin="0.1s" dur="2s"/>
+        </div>
+      </time:par>
+      <time:par>
+        <div style="font-family: sans-serif;font-size: x-large;font-weight: bolder;text-align: center;"
+          class="time" begin="0.1s"dur="2s" timeAction="display">
+          Hello Dad
+        </div>
+        <div style="position: absolute; top: 70px; left: 260px;">
+          <img id="second" class="time" timeAction="display" src="../img/pic02.jpg" dur="2s"/>
+        </div>
+      </time:par>
+      <time:par>
+        <div style="position: absolute; top: 70px; left: 260px;">
+          <img id="third" class="time" timeAction="display" src="../img/pic01.jpg" dur="2s"/>
+        </div>
+      </time:par>
+      <time:par>
+        <div style="font-family: sans-serif;font-size: x-large;font-weight: bolder;text-align: center;"
+          class="time" begin="0.1s"dur="2s" timeAction="display">
+          Hello Mum
+        </div>
+        <div style="position: absolute; top: 70px; left: 260px;">
+          <img id="forth" class="time" timeAction="display" src="../img/pic03.jpg" dur="2s"/>
+        </div>
+      </time:par>
+    </time:seq>
+  </body>
+</html>

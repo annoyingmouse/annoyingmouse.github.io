@@ -1,0 +1,124 @@
+{
+    "exam": [
+        {
+            "question": "Have you ever kissed your own bicep?",
+            "answers": {
+                "a": "Yes",
+                "b": "No"
+            },
+            "solution": [
+                "a"
+            ]
+        },
+        {
+            "question": "Do you know the names of two or more luxury jam brands?",
+            "answers": {
+                "a": "Yes",
+                "b": "No"
+            },
+            "solution": [
+                "a"
+            ]
+        },
+        {
+            "question": "Are you in favour of Ben Elton?",
+            "answers": {
+                "a": "Yes",
+                "b": "No"
+            },
+            "solution": [
+                "a"
+            ]
+        },
+        {
+            "question": "When arriving by car to collect a friend, do you simply pull up in the middle of the road and honk your horn until they emerge?",
+            "answers": {
+                "a": "Yes",
+                "b": "No"
+            },
+            "solution": [
+                "a"
+            ]
+        },
+        {
+            "question": "Have you ever registered a Twitter account in the name of a celebrity's pet?",
+            "answers": {
+                "a": "Yes",
+                "b": "No"
+            },
+            "solution": [
+                "a"
+            ]
+        },
+        {
+            "question": "Do you regularly use the word 'lifestyle'?",
+            "answers": {
+                "a": "Yes",
+                "b": "No"
+            },
+            "solution": [
+                "a"
+            ]
+        },
+        {
+            "question": "Do you consider yourself more knowledgeable about wine than others in your peer group?",
+            "answers": {
+                "a": "Yes",
+                "b": "No"
+            },
+            "solution": [
+                "a"
+            ]
+        },
+        {
+            "question": "Would you describe yourself as having a 'packed schedule'?",
+            "answers": {
+                "a": "Yes",
+                "b": "No"
+            },
+            "solution": [
+                "a"
+            ]
+        },
+        {
+            "question": "Do you work in television?",
+            "answers": {
+                "a": "Yes",
+                "b": "No"
+            },
+            "solution": [
+                "a"
+            ]
+        },
+        {
+            "question": "Have you already planned your costume for next year's Bestival?",
+            "answers": {
+                "a": "Yes",
+                "b": "No"
+            },
+            "solution": [
+                "a"
+            ]
+        },
+        {
+            "question": "Have you ever been described as 'excitable'?",
+            "answers": {
+                "a": "Yes",
+                "b": "No"
+            },
+            "solution": [
+                "a"
+            ]
+        },
+        {
+            "question": "Can you juggle, or do you think juggling is good?",
+            "answers": {
+                "a": "Yes",
+                "b": "No"
+            },
+            "solution": [
+                "a"
+            ]
+        }
+    ]
+}

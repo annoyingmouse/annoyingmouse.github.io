@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" x="0" y="0" width="750" height="1000">
+  <defs>
+    <g id="myCurve" style="fill: none;stroke: #ff0000;stroke-width: 8;stroke-linecap: round;stroke-linejoin: round;">
+      <path d="M 56.25,0 C 56.25,7 52.5,20 52.5,20"/>
+      <path d="M 68.75,0 C 68.75,11 64.75,21 64.75,21 L 64.75,21"/>
+      <path d="M 64.75,21 C 92.25,21 93.75,0 93.75,0"/>
+      <path d="M 60,33.75 C 96,33.75 106.25,12.5 106.25,0"/>
+      <path d="M 47.5,32.5 C 47.5,32.5 52.5,20 52.5,20"/>
+      <path d="M 60,33.75 C 60,33.75 64.75,21 64.75,21"/>
+      <path d="M 26.25,20 L 23.75,32.5"/>
+      <path d="M 47.5,32.5 L 36,55"/>
+      <path d="M 45,63.75 L 60,33.75"/>
+      <path d="M 36,55 L 45,63.75"/>
+      <path d="M 28.75,65 L 37.5,75"/>
+      <path d="M 21.25,55 L 28.75,65"/>
+      <path d="M 23.75,32.5 L 21.25,55"/>
+      <path d="M 11.25,33.75 L 18.75,0"/>
+      <path d="M 20,80 L 21.25,55"/>
+      <path d="M 20,80 L 28.75,65"/>
+      <path d="M 45,63.75 L 60,76"/>
+      <path d="M 37.5,75 L 47.5,82.5"/>
+      <path d="M 47.5,82.5 L 60,76"/>
+      <path d="M 60,76 L 91.25,62.5"/>
+      <path d="M 92.5,75 L 73.75,83.75"/>
+      <path d="M 73.75,83.75 L 60,90"/>
+      <path d="M 37.5,106.25 L 125,106.25"/>
+      <path d="M 31.25,0 C 31.25,14.25 46.25,20 52.5,20"/>
+      <path d="M 26.25,20 C 33.75,31 47.5,32.5 47.5,32.5"/>
+      <path d="M 18.75,0 C 20.25,15.25 22.5,15 26.25,20"/>
+      <path d="M 23.75,32.5 C 27.5,41.75 37,55 36,55"/>
+      <path d="M 12.5,106.25 C 9,106.25 6.25,103.75 6.25,100 C 6.25,75 11.25,33.75 11.25,33.75"/>
+      <path d="M 6.25,0 C 6.25,16.25 11.25,33.75 11.25,33.75"/>
+      <path d="M 12.5,106.25 C 20,106.25 37.5,75 37.5,75"/>
+      <path d="M 91.25,62.5 C 91.25,31.25 108.75,18.75 125,18.75"/>
+      <path d="M 125,31.25 C 105,31.25 103.75,58.75 103.75,58.75"/>
+      <path d="M 37.5,106.25 C 45.25,96.5 60,90 60,90"/>
+      <path d="M 18.75,112.5 C 18.75,100 47.5,82.5 47.5,82.5"/>
+      <path d="M 18.75,112.5 C 18.75,117.5 22.5,118.75 25,118.75 C 27.5,118.75 125,118.75 125,118.75"/>
+      <path d="M 91.25,62.5 L 92.5,75"/>
+      <path d="M 103.75,58.75 L 105,71"/>
+      <path d="M 92.5,75 C 92.5,81.25 98.75,91.25 98.75,91.25"/>
+      <path d="M 105,71 C 105,80 112.5,93.75 125,93.75"/>
+      <path d="M 125,93.75 C 111.25,93.75 98.75,91.25 98.75,91.25"/>
+      <path d="M 98.75,91.25 C 93.75,91.25 73.75,83.75 73.75,83.75"/>
+      <path d="M 60,90 C 60,90 85,106.25 125,106.25"/>
+      <path d="M 125,68.75 C 115,68.75 105,71 105,71"/>
+      <path d="M 125,56.25 C 113.75,56.25 103.75,58.75 103.75,58.75"/>
+    </g>
+    <g id="myStraight" style="fill: none;stroke: #ff0000;stroke-width: 8;stroke-linecap: round;stroke-linejoin: round;">
+      <path d="M 56.25,0 C 56.25,7 52.5,20 52.5,20"/>
+      <path d="M 68.75,0 C 68.75,11 65,21 65,21.25"/>
+      <path d="M 65,21.25 C 92.5,21.25 93.75,0 93.75,0"/>
+      <path d="M 60,33.75 C 96.25,33.75 106.25,12.5 106.25,0"/>
+      <path d="M 47.5,32.5 C 47.5,32.5 52.5,20 52.5,20"/>
+      <path d="M 60,33.75 C 60,33.75 65,21 65,21.25"/>
+      <path d="M 26.25,20 L 25,25"/>
+      <path d="M 47.5,32.5 L 41.25,43.75"/>
+      <path d="M 51.25,51 L 60,33.75"/>
+      <path d="M 41.25,43.75 L 51.25,51.25"/>
+      <path d="M 35,55 L 45,62.5"/>
+      <path d="M 22.5,42.5 L 35,55"/>
+      <path d="M 25,25 L 22.5,42.5"/>
+      <path d="M 12.5,26.25 L 18.75,0"/>
+      <path d="M 20,80 L 22.5,42.5"/>
+      <path d="M 20,80 L 35,55"/>
+      <path d="M 51.25,51 L 72.5,66.25"/>
+      <path d="M 45,62.5 L 67.5,78.75"/>
+      <path d="M 67.5,78.75 L 72.5,66.25"/>
+      <path d="M 82.5,75 L 77.5,87.5"/>
+      <path d="M 67.5,78.75 L 62.5,91.25"/>
+      <path d="M 75,92.5 L 77.5,87.5"/>
+      <path d="M 75,92.5 L 62.5,91.25"/>
+      <path d="M 58.75,103 L 71.25,103"/>
+      <path d="M 83.75,95 L 75,92.5"/>
+      <path d="M 77.5,87.5 L 83.75,95"/>
+      <path d="M 106.25,37.5 L 106.25,125"/>
+      <path d="M 31.25,0 C 31.25,13.75 46.25,20 52.5,20"/>
+      <path d="M 26.25,20 C 33.75,30 47.5,32.5 47.5,32.5"/>
+      <path d="M 18.75,0 C 20,15 22.5,15 26.25,20"/>
+      <path d="M 25,25 C 30,32.5 41.25,43.75 41.25,43.75"/>
+      <path d="M 12.5,106.25 C 8.75,106.25 6.25,103 6.25,100 C 6.25,75 12.5,26 12.5,26.25"/>
+      <path d="M 6.25,0 C 6.25,16 12.5,26 12.5,26.25"/>
+      <path d="M 12.5,106.25 C 20,106.25 45,62.5 45,62.5"/>
+      <path d="M 62.5,91.25 C 31.25,91.25 18.75,108 18.75,125"/>
+      <path d="M 31.25,125 C 31.25,105 58.75,103 58.75,103"/>
+      <path d="M 82.5,75 C 97,87 106.25,106.25 106.25,125"/>
+      <path d="M 83.75,95 C 93.75,105 93.75,125 93.75,125"/>
+      <path d="M 71.25,103 C 73.75,103 93.75,110 93.75,125"/>
+      <path d="M 106.25,37.5 C 96.25,45.25 82.5,75 82.5,75"/>
+      <path d="M 112.5,18.75 C 97.5,18.5 72.5,66 72.5,66.25"/>
+      <path d="M 112.5,18.75 C 117.5,18.75 118.75,22.5 118.75,25 C 118.75,27.5 118.75,125 118.75,125"/>
+      <path d="M 56.25,125 C 56.25,112 58.75,103 58.75,103"/>
+      <path d="M 68.75,125 C 68.75,112 71.25,103 71.25,103"/>
+    </g>
+  </defs>
+  <g>
+    <rect x="0" y="0" width="750" height="1000"/>
+    <use xlink:href="#myCurve" transform="translate(250,0) rotate(90,62.5,62.5)"/>
+<!--     <use xlink:href="#myCurve" transform="translate(375,0) rotate(180,62.5,62.5)"/>
+    <use xlink:href="#myStraight" transform="translate(250,125)"/>
+    <use xlink:href="#myStraight" transform="translate(250,125) rotate(180,62.5,62.5) scale(-1,1)"/>
+    <use xlink:href="#myCurve" transform="translate(375,375) rotate(90,62.5,62.5) scale(-1,1)"/>
+    <use xlink:href="#myStraight" transform="translate(625,125) rotate(270,62.5,62.5) scale(-1,-1)"/>
+    <use xlink:href="#myCurve" transform="translate(625,250) rotate(180,62.5,62.5)"/>
+    <use xlink:href="#myCurve" transform="translate(625,375) rotate(270,62.5,62.5)"/>
+    <use xlink:href="#myStraight" transform="translate(375,375) rotate(90,62.5,62.5) scale(1,-1)"/>
+    <use xlink:href="#myCurve" transform="translate(375,500) scale(1,-1)"/>
+    <use xlink:href="#myStraight" transform="translate(375,500) rotate(180,62.5,62.5)"/>
+    <use xlink:href="#myStraight" transform="translate(375,750) scale(1,-1)"/>
+    <use xlink:href="#myStraight" transform="translate(375,750) rotate(180,62.5,62.5)"/>
+    <use xlink:href="#myCurve" transform="translate(375,875) rotate(270,62.5,62.5)"/>
+    <use xlink:href="#myCurve" transform="translate(250,875)"/>
+ -->    <use xlink:href="#myStraight" transform="translate(375,750) scale(-1,1)"/>
+<!--     <use xlink:href="#myStraight" transform="translate(250,625)"/>
+    <use xlink:href="#myStraight" transform="translate(375,500) scale(-1,1)"/>
+    <use xlink:href="#myCurve" transform="translate(125,375) rotate(90,62.5,62.5) scale(1,-1)"/>
+    <use xlink:href="#myStraight" transform="translate(0,500) rotate(90,62.5,62.5) scale(-1,-1)"/>
+    <use xlink:href="#myCurve" transform="translate(0,375)"/>
+    <use xlink:href="#myCurve" transform="translate(0,250) rotate(90,62.5,62.5)"/>
+    <use xlink:href="#myCurve" transform="translate(250,125) rotate(180,62.5,62.5) scale(1,-1)"/>
+    <use xlink:href="#myStraight" transform="translate(125,375) rotate(90,62.5,62.5) scale(-1,1)"/>
+ -->  </g>
+</svg>

@@ -1,0 +1,117 @@
+html, body {
+    background-color: #eee;
+}
+
+body{
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.contentArea {
+    background-color: #fff;
+    -webkit-border-radius: 10px 10px 10px 10px;
+       -moz-border-radius: 10px 10px 10px 10px;
+            border-radius: 10px 10px 10px 10px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+       -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+}
+
+.padded { 
+    padding: 0 10px; 
+}
+
+/* The white background content wrapper */
+.container > .content {
+    background-color: #fff;
+    padding: 20px;
+    margin: 0 20px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+       -moz-border-radius: 10px 10px 10px 10px;
+            border-radius: 10px 10px 10px 10px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+       -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+}
+
+.customer,
+#newCustomer,
+.invoice,
+#newInvoice,
+#reportDates{
+    background-color: #fff;
+    margin: 0 0 20px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+       -moz-border-radius: 10px 10px 10px 10px;
+            border-radius: 10px 10px 10px 10px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+       -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+}
+
+#newCustomer, #newInvoice, #reportDates {
+    background-color: #ddd;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .50);
+       -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .50);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .50);
+}
+
+.login-form, .details-form {
+    margin-left: 20px;
+}
+
+.login-form .btn-primary, .details-form .btn-primary {
+    margin-left: 0;
+}
+
+legend {
+    margin-right: 50px;
+    font-weight: bold;
+    color: #404040;
+}
+
+.customer, #newCustomer, #newInvoice, .icon-edit, .icon-remove, .icon-print, thead.details, .lineItem {
+    cursor: pointer;
+}
+
+#report {
+    background-color: #fff;
+    margin: 0;
+    padding: 0 0 20px 0;
+    -webkit-border-radius: 10px 10px 10px 10px;
+       -moz-border-radius: 10px 10px 10px 10px;
+            border-radius: 10px 10px 10px 10px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+       -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+}
+
+#reportLines_wrapper {
+    margin: 20px;
+}
+
+/*
+ * Sort out correct padding on content.
+ */
+.thingTop {
+    margin: 10px 10px 0 10px;
+}
+
+.thing {
+    margin: 0 10px;
+}
+
+.thingBottom {
+    margin: 0 10px 0 10px;
+}
+
+label.error {
+    color: #ff0000;
+}
+
+.navbar .nav > li.presentPage{
+    padding: 9px 10px 11px;
+    line-height: 19px;
+    color: white;
+}
+

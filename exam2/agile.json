@@ -1,0 +1,225 @@
+{
+    "exam": [
+        {
+            "question": "Why is 7 plus or minus 2 an optimal size of an Agile team?",
+            "answers": {
+                "a": "To make sure the whole team can fit into an average room.",
+                "b": "To make sure daily stand ups can be completed in 15 minutes or less.",
+                "c": "To ensure effective communication and collaboration.",
+                "d": "Teams of that size are easy to control."
+            },
+            "solution": [
+                "c"
+            ]
+        },{
+            "question": "The Agile Manifesto, it says we aim to produce Working Software over...",
+            "answers": {
+                "a": "Comprehensive testing.",
+                "b": "Comprehensive documentation.",
+                "c": "Cost savings.",
+                "d": "Developer satisfaction."
+            },
+            "solution": [
+                "b"
+            ]
+        },{
+            "question": "What does the agile manifesto say we SHOULD do with changing requirements?",
+            "answers": {
+                "a": "Welcome changing requirements, except late in development.",
+                "b": "Welcome changing requirements, even late in development.",
+                "c": "Reject all changes during the current development.",
+                "d": "Reject all changes until the next iteration."
+            },
+            "solution": [
+                "b"
+            ]
+        },{
+            "question": "One of the roles of a ScrumMaster is to...",
+            "answers": {
+                "a": "Hold the vision.",
+                "b": "Remove impediments.",
+                "c": "Determine who does the work.",
+                "d": "Sign off work as done."
+            },
+            "solution": [
+                "b"
+            ]
+        },{
+            "question": "Which one of the following is NOT one of the pillars of the empirical process?",
+            "answers": {
+                "a": "Control.",
+                "b": "Inspection.",
+                "c": "Adaptation.",
+                "d": "Transparency."
+            },
+            "solution": [
+                "a"
+            ]
+        },{
+            "question": "In which practice of an agile project would you NORMALLY expect to use root cause analysis?",
+            "answers": {
+                "a": "During a planning stage to confirm the acceptance criteria is correct.",
+                "b": "Root cause analysis is never used in Agile environments.",
+                "c": "During a demonstration to end users, to establish the cause of a newly found defect.",
+                "d": "During a retrospective session to identify the root cause of an identified issue."
+            },
+            "solution": [
+                "d"
+            ]
+        },{
+            "question": "Which one of the following is NOT one of the three Cs of a User Story?",
+            "answers": {
+                "a": "Conversation.",
+                "b": "Control.",
+                "c": "Card.",
+                "d": "Confirmation."
+            },
+            "solution": [
+                "b"
+            ]
+        },{
+            "question": "Refactoring is a process to...",
+            "answers": {
+                "a": "Remove software defects.",
+                "b": "Improve the code quality without altering its behaviour.",
+                "c": "Make code as perfect as possible.",
+                "d": "Change a sprint backlog."
+            },
+            "solution": [
+                "b"
+            ]
+        },{
+            "question": "How does the Cone of Uncertainty relate to the use of relative estimation by Agile teams?",
+            "answers": {
+                "a": "High level epic stories contain limited knowledge about the requirements. Attempting to provide a time-based precise estimate is very likely to be susceptible to high variability. As such, it is appropriate to provide relative estimation that compares a story to other stories.",
+                "b": "Agile teams struggle to provide accurate estimates. So, it is deemed to be better to provide a relative estimate that can be changed whenever the project deadline is at risk of being late.",
+                "c": "The variability shown by the Cone of Uncertainty allows teams to provide a large story point estimation range that only gets fixed during the iteration planning.",
+                "d": "High level epics are large-sized stories that can take a single Agile team several months to complete. Agile only allows us to estimate in hours and, thus, we have to use a relative measure that helps the team estimate large user stories."
+            },
+            "solution": [
+                "a"
+            ]
+        },{
+            "question": "Which one of the following describes DSDM Atern?",
+            "answers": {
+                "a": "An Agile framework for Product Development.",
+                "b": "An Agile framework for Project Management.",
+                "c": "An Agile framework for Requirements Definition.",
+                "d": "An Agile framework for Quality Assurance."
+            },
+            "solution": [
+                "b"
+            ]
+        },{
+            "question": "What is a typical problem with MoSCoW prioritisation?",
+            "answers": {
+                "a": "It is not compatible with Agile.",
+                "b": "The output cannot be used for planning.",
+                "c": "Most of the stories get prioritised as \"must do\".",
+                "d": "Teams find it difficult to use."
+            },
+            "solution": [
+                "c"
+            ]
+        },{
+            "question": "Which one of the following is a generic benefit of Agile over traditional methods?",
+            "answers": {
+                "a": "Increased customer satisfaction through regular feedback.",
+                "b": "You can complete the same work with fewer developers.",
+                "c": "Agile gives instant benefit.",
+                "d": "No planning is required."
+            },
+            "solution": [
+                "a"
+            ]
+        },{
+            "question": "Which one of the following roles are prescribed by the Kanban development method?",
+            "answers": {
+                "a": "Product Owner.",
+                "b": "Development team.",
+                "c": "Neither A or B.",
+                "d": "Both A and B."
+            },
+            "solution": [
+                "c"
+            ]
+        },{
+            "question": "During a daily stand-up, a Scrum team realises that they will not be able to complete the stories included in their sprint. What SHOULD the team do next?",
+            "answers": {
+                "a": "Quietly schedule a few late nights hoping to finish the work on time.",
+                "b": "Approach the Product Owner and negotiate the scope of the lowest priority stories.",
+                "c": "Bring in a few extra people into the team to help them complete all of the stories.",
+                "d": "Decide to de-scope the lowest priority stories."
+            },
+            "solution": [
+                "b"
+            ]
+        },{
+            "question": "What advantage does Agile have over Waterfall projects?",
+            "answers": {
+                "a": "Agile projects do not use any planning.",
+                "b": "Agile can cope with complex changing environments.",
+                "c": "Agile can cope with a chaotic or disordered environments.",
+                "d": "Agile removes the need for documentation."
+            },
+            "solution": [
+                "b"
+            ]
+        },{
+            "question": "The term POOGI refers to the process of ongoing...",
+            "answers": {
+                "a": "Involvement.",
+                "b": "Interactions.",
+                "c": "Iterations.",
+                "d": "Improvement."
+            },
+            "solution": [
+                "d"
+            ]
+        },{
+            "question": "Which one of the following is NOT a stage of Tuckmans model of group development?",
+            "answers": {
+                "a": "Forming.",
+                "b": "Starting.",
+                "c": "Performing.",
+                "d": "Storming."
+            },
+            "solution": [
+                "b"
+            ]
+        },{
+            "question": "What would be the response to a Test Manager who insists 'It will take too much time to test continuously, it would be better to test once at the end of the project'?",
+            "answers": {
+                "a": "Ask them to test at least the most important features.",
+                "b": "Explain to them the cost of finding defects at the end of a project can be massive and outweigh the cost of testing incrementally throughout the project.",
+                "c": "Accept this and have the development team test the project themselves.",
+                "d": "Accept this and add a few sprints at the end of the project for testing and bug fixing."
+            },
+            "solution": [
+                "b"
+            ]
+        },{
+            "question": "Which one of the following would NOT be seen as one of the Lean Muda or seven deadly wastes?",
+            "answers": {
+                "a": "Partially done work.",
+                "b": "Extra features.",
+                "c": "Relearning.",
+                "d": "Exploratory Testing."
+            },
+            "solution": [
+                "d"
+            ]
+        },{
+            "question": "What would be a concern if business users are not actively engaged with the developers?",
+            "answers": {
+                "a": "The wrong products may be developed.",
+                "b": "The products may not meet requirements.",
+                "c": "There will be lack of trust between developers and the business users.",
+                "d": "All of the above."
+            },
+            "solution": [
+                "d"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+body {
+    background: #ffffff;
+}
+.wrapper, .footer {
+  margin: 0 auto;
+  width: 940px;
+}
+.wrapper, .footer{
+  background: none repeat scroll 0 0 #FFFFFF;
+  padding: 60px 20px 20px 0;
+
+}
+#header {
+  padding: 20px 0 0;
+}
+#container {
+  float: left;
+  margin: 0 0 0 0;
+  width: 100%;
+}
+label {
+    float: left;  
+    width: 20em;  
+    margin-right: 1em;  
+    text-align: right; 
+}   
+#arcusGlobal {
+  clear: both;
+  font-size: 70%;
+  padding: 10px;
+  text-align: center;
+}
+#cheeseHolder p {
+  margin-top: 1em;
+  
+}

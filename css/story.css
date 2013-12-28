@@ -1,0 +1,9 @@
+div.storyPart, div#intro{
+    width: 800px;
+    margin: 10px auto;
+    padding:10px;
+    background-color:#eeeeee;
+            border-radius: 10px; /* CSS3 */
+       -moz-border-radius: 10px; /* Firefox */
+    -webkit-border-radius: 10px; /* Safari, Chrome */
+    }

@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Permutime</title>
+		<meta charset="utf-8" />
+        <link rel="stylesheet" href="../css/jquery-ui.css" type="text/css" media="all" />
+        <link href="../css/star.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="../css/story.css" type="text/css" media="all" />
+        <link href="../css/bootstrap.css" rel="stylesheet"/>
+        <link href="../css/bootstrap-responsive.css" rel="stylesheet"/>
+        <!--[if lt IE 9]>
+        <script src="../js/html5.js"></script>
+        <![endif]-->
+        <style>
+            body {
+                padding-top: 60px;
+            }
+        </style>
+	</head>
+	<body>
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="../">GDrive</a>
+                    <div class="nav-collapse">
+                        <ul class="nav" id="siteLinks"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+
+		<div id="intro">
+			<h1>Permutime</h1>
+			<h2>By Alex Weinle</h2>
+			<p>Dear reader. Print and cut the story between sections then shuffle the pieces and read in any order. If you prefer not to cut your manuscript, scroll your finger down the list of permutations at the side and follow that order. Watchtower out.</p>
+            <form class="form-inline">
+			<label for="storyOrder">Permutations:</label>
+			<select id="storyOrder" name="storyOrder">
+				<option value="[1,2,3,4,6,5]" selected="selected">123465</option>
+				<option value="[1,2,3,5,4,6]">123546</option>
+				<option value="[1,2,3,5,6,4]">123564</option>
+				<option value="[1,2,3,6,4,5]">123645</option>
+				<option value="[1,2,3,6,5,4]">123654</option>
+				<option value="[1,2,4,3,5,6]">124356</option>
+				<option value="[1,2,4,3,6,5]">124365</option>
+				<option value="[1,2,4,5,3,6]">124536</option>
+				<option value="[1,2,4,5,6,3]">124563</option>
+				<option value="[1,2,4,6,3,5]">124635</option>
+				<option value="[1,2,4,6,5,3]">124653</option>
+				<option value="[1,2,5,3,4,6]">125346</option>
+				<option value="[1,2,5,3,6,4]">125364</option>
+				<option value="[1,2,5,4,3,6]">125436</option>
+				<option value="[1,2,5,4,6,3]">125463</option>
+				<option value="[1,2,5,6,3,4]">125634</option>
+				<option value="[1,2,5,6,4,3]">125643</option>
+				<option value="[1,2,6,3,4,5]">126345</option>
+				<option value="[1,2,6,3,5,4]">126354</option>
+				<option value="[1,2,6,4,3,5]">126435</option>
+				<option value="[1,2,6,4,5,3]">126453</option>
+				<option value="[1,2,6,5,3,4]">126534</option>
+				<option value="[1,2,6,5,4,3]">126543</option>
+				<option value="[1,3,2,4,5,6]">132456</option>
+				<option value="[1,3,2,4,6,5]">132465</option>
+				<option value="[1,3,2,5,4,6]">132546</option>
+				<option value="[1,3,2,5,6,4]">132564</option>
+				<option value="[1,3,2,6,4,5]">132645</option>
+				<option value="[1,3,2,6,5,4]">132654</option>
+				<option value="[1,3,4,2,5,6]">134256</option>
+				<option value="[1,3,4,2,6,5]">134265</option>
+				<option value="[1,3,4,5,2,6]">134526</option>
+				<option value="[1,3,4,5,6,2]">134562</option>
+				<option value="[1,3,4,6,2,5]">134625</option>
+				<option value="[1,3,4,6,5,2]">134652</option>
+				<option value="[1,3,5,2,4,6]">135246</option>
+				<option value="[1,3,5,2,6,4]">135264</option>
+				<option value="[1,3,5,4,2,6]">135426</option>
+				<option value="[1,3,5,4,6,2]">135462</option>
+				<option value="[1,3,5,6,2,4]">135624</option>
+				<option value="[1,3,5,6,4,2]">135642</option>
+				<option value="[1,3,6,2,4,5]">136245</option>
+				<option value="[1,3,6,2,5,4]">136254</option>
+				<option value="[1,3,6,4,2,5]">136425</option>
+				<option value="[1,3,6,4,5,2]">136452</option>
+				<option value="[1,3,6,5,2,4]">136524</option>
+				<option value="[1,3,6,5,4,2]">136542</option>
+				<option value="[1,4,2,3,5,6]">142356</option>
+				<option value="[1,4,2,3,6,5]">142365</option>
+				<option value="[1,4,2,5,3,6]">142536</option>
+				<option value="[1,4,2,5,6,3]">142563</option>
+				<option value="[1,4,2,6,3,5]">142635</option>
+				<option value="[1,4,2,6,5,3]">142653</option>
+				<option value="[1,4,3,2,5,6]">143256</option>
+				<option value="[1,4,3,2,6,5]">143265</option>
+				<option value="[1,4,3,5,2,6]">143526</option>
+				<option value="[1,4,3,5,6,2]">143562</option>
+				<option value="[1,4,3,6,2,5]">143625</option>
+				<option value="[1,4,3,6,5,2]">143652</option>
+				<option value="[1,4,5,2,3,6]">145236</option>
+				<option value="[1,4,5,2,6,3]">145263</option>
+				<option value="[1,4,5,3,2,6]">145326</option>
+				<option value="[1,4,5,3,6,2]">145362</option>
+				<option value="[1,4,5,6,2,3]">145623</option>
+				<option value="[1,4,5,6,3,2]">145632</option>
+				<option value="[1,4,6,2,3,5]">146235</option>
+				<option value="[1,4,6,2,5,3]">146253</option>
+				<option value="[1,4,6,3,2,5]">146325</option>
+				<option value="[1,4,6,3,5,2]">146352</option>
+				<option value="[1,4,6,5,2,3]">146523</option>
+				<option value="[1,4,6,5,3,2]">146532</option>
+				<option value="[1,5,2,3,4,6]">152346</option>
+				<option value="[1,5,2,3,6,4]">152364</option>
+				<option value="[1,5,2,4,3,6]">152436</option>
+				<option value="[1,5,2,4,6,3]">152463</option>
+				<option value="[1,5,2,6,3,4]">152634</option>
+				<option value="[1,5,2,6,4,3]">152643</option>
+				<option value="[1,5,3,2,4,6]">153246</option>
+				<option value="[1,5,3,2,6,4]">153264</option>
+				<option value="[1,5,3,4,2,6]">153426</option>
+				<option value="[1,5,3,4,6,2]">153462</option>
+				<option value="[1,5,3,6,2,4]">153624</option>
+				<option value="[1,5,3,6,4,2]">153642</option>
+				<option value="[1,5,4,2,3,6]">154236</option>
+				<option value="[1,5,4,2,6,3]">154263</option>
+				<option value="[1,5,4,3,2,6]">154326</option>
+				<option value="[1,5,4,3,6,2]">154362</option>
+				<option value="[1,5,4,6,2,3]">154623</option>
+				<option value="[1,5,4,6,3,2]">154632</option>
+				<option value="[1,5,6,2,3,4]">156234</option>
+				<option value="[1,5,6,2,4,3]">156243</option>
+				<option value="[1,5,6,3,2,4]">156324</option>
+				<option value="[1,5,6,3,4,2]">156342</option>
+				<option value="[1,5,6,4,2,3]">156423</option>
+				<option value="[1,5,6,4,3,2]">156432</option>
+				<option value="[1,6,2,3,4,5]">162345</option>
+				<option value="[1,6,2,3,5,4]">162354</option>
+				<option value="[1,6,2,4,3,5]">162435</option>
+				<option value="[1,6,2,4,5,3]">162453</option>
+				<option value="[1,6,2,5,3,4]">162534</option>
+				<option value="[1,6,2,5,4,3]">162543</option>
+				<option value="[1,6,3,2,4,5]">163245</option>
+				<option value="[1,6,3,2,5,4]">163254</option>
+				<option value="[1,6,3,4,2,5]">163425</option>
+				<option value="[1,6,3,4,5,2]">163452</option>
+				<option value="[1,6,3,5,2,4]">163524</option>
+				<option value="[1,6,3,5,4,2]">163542</option>
+				<option value="[1,6,4,2,3,5]">164235</option>
+				<option value="[1,6,4,2,5,3]">164253</option>
+				<option value="[1,6,4,3,2,5]">164325</option>
+				<option value="[1,6,4,3,5,2]">164352</option>
+				<option value="[1,6,4,5,2,3]">164523</option>
+				<option value="[1,6,4,5,3,2]">164532</option>
+				<option value="[1,6,5,2,3,4]">165234</option>
+				<option value="[1,6,5,2,4,3]">165243</option>
+				<option value="[1,6,5,3,2,4]">165324</option>
+				<option value="[1,6,5,3,4,2]">165342</option>
+				<option value="[1,6,5,4,2,3]">165423</option>
+				<option value="[1,6,5,4,3,2]">165432</option>
+				<option value="[2,1,3,4,5,6]">213456</option>
+				<option value="[2,1,3,4,6,5]">213465</option>
+				<option value="[2,1,3,5,4,6]">213546</option>
+				<option value="[2,1,3,5,6,4]">213564</option>
+				<option value="[2,1,3,6,4,5]">213645</option>
+				<option value="[2,1,3,6,5,4]">213654</option>
+				<option value="[2,1,4,3,5,6]">214356</option>
+				<option value="[2,1,4,3,6,5]">214365</option>
+				<option value="[2,1,4,5,3,6]">214536</option>
+				<option value="[2,1,4,5,6,3]">214563</option>
+				<option value="[2,1,4,6,3,5]">214635</option>
+				<option value="[2,1,4,6,5,3]">214653</option>
+				<option value="[2,1,5,3,4,6]">215346</option>
+				<option value="[2,1,5,3,6,4]">215364</option>
+				<option value="[2,1,5,4,3,6]">215436</option>
+				<option value="[2,1,5,4,6,3]">215463</option>
+				<option value="[2,1,5,6,3,4]">215634</option>
+				<option value="[2,1,5,6,4,3]">215643</option>
+				<option value="[2,1,6,3,4,5]">216345</option>
+				<option value="[2,1,6,3,5,4]">216354</option>
+				<option value="[2,1,6,4,3,5]">216435</option>
+				<option value="[2,1,6,4,5,3]">216453</option>
+				<option value="[2,1,6,5,3,4]">216534</option>
+				<option value="[2,1,6,5,4,3]">216543</option>
+				<option value="[2,3,1,4,5,6]">231456</option>
+				<option value="[2,3,1,4,6,5]">231465</option>
+				<option value="[2,3,1,5,4,6]">231546</option>
+				<option value="[2,3,1,5,6,4]">231564</option>
+				<option value="[2,3,1,6,4,5]">231645</option>
+				<option value="[2,3,1,6,5,4]">231654</option>
+				<option value="[2,3,4,1,5,6]">234156</option>
+				<option value="[2,3,4,1,6,5]">234165</option>
+				<option value="[2,3,4,5,1,6]">234516</option>
+				<option value="[2,3,4,5,6,1]">234561</option>
+				<option value="[2,3,4,6,1,5]">234615</option>
+				<option value="[2,3,4,6,5,1]">234651</option>
+				<option value="[2,3,5,1,4,6]">235146</option>
+				<option value="[2,3,5,1,6,4]">235164</option>
+				<option value="[2,3,5,4,1,6]">235416</option>
+				<option value="[2,3,5,4,6,1]">235461</option>
+				<option value="[2,3,5,6,1,4]">235614</option>
+				<option value="[2,3,5,6,4,1]">235641</option>
+				<option value="[2,3,6,1,4,5]">236145</option>
+				<option value="[2,3,6,1,5,4]">236154</option>
+				<option value="[2,3,6,4,1,5]">236415</option>
+				<option value="[2,3,6,4,5,1]">236451</option>
+				<option value="[2,3,6,5,1,4]">236514</option>
+				<option value="[2,3,6,5,4,1]">236541</option>
+				<option value="[2,4,1,3,5,6]">241356</option>
+				<option value="[2,4,1,3,6,5]">241365</option>
+				<option value="[2,4,1,5,3,6]">241536</option>
+				<option value="[2,4,1,5,6,3]">241563</option>
+				<option value="[2,4,1,6,3,5]">241635</option>
+				<option value="[2,4,1,6,5,3]">241653</option>
+				<option value="[2,4,3,1,5,6]">243156</option>
+				<option value="[2,4,3,1,6,5]">243165</option>
+				<option value="[2,4,3,5,1,6]">243516</option>
+				<option value="[2,4,3,5,6,1]">243561</option>
+				<option value="[2,4,3,6,1,5]">243615</option>
+				<option value="[2,4,3,6,5,1]">243651</option>
+				<option value="[2,4,5,1,3,6]">245136</option>
+				<option value="[2,4,5,1,6,3]">245163</option>
+				<option value="[2,4,5,3,1,6]">245316</option>
+				<option value="[2,4,5,3,6,1]">245361</option>
+				<option value="[2,4,5,6,1,3]">245613</option>
+				<option value="[2,4,5,6,3,1]">245631</option>
+				<option value="[2,4,6,1,3,5]">246135</option>
+				<option value="[2,4,6,1,5,3]">246153</option>
+				<option value="[2,4,6,3,1,5]">246315</option>
+				<option value="[2,4,6,3,5,1]">246351</option>
+				<option value="[2,4,6,5,1,3]">246513</option>
+				<option value="[2,4,6,5,3,1]">246531</option>
+				<option value="[2,5,1,3,4,6]">251346</option>
+				<option value="[2,5,1,3,6,4]">251364</option>
+				<option value="[2,5,1,4,3,6]">251436</option>
+				<option value="[2,5,1,4,6,3]">251463</option>
+				<option value="[2,5,1,6,3,4]">251634</option>
+				<option value="[2,5,1,6,4,3]">251643</option>
+				<option value="[2,5,3,1,4,6]">253146</option>
+				<option value="[2,5,3,1,6,4]">253164</option>
+				<option value="[2,5,3,4,1,6]">253416</option>
+				<option value="[2,5,3,4,6,1]">253461</option>
+				<option value="[2,5,3,6,1,4]">253614</option>
+				<option value="[2,5,3,6,4,1]">253641</option>
+				<option value="[2,5,4,1,3,6]">254136</option>
+				<option value="[2,5,4,1,6,3]">254163</option>
+				<option value="[2,5,4,3,1,6]">254316</option>
+				<option value="[2,5,4,3,6,1]">254361</option>
+				<option value="[2,5,4,6,1,3]">254613</option>
+				<option value="[2,5,4,6,3,1]">254631</option>
+				<option value="[2,5,6,1,3,4]">256134</option>
+				<option value="[2,5,6,1,4,3]">256143</option>
+				<option value="[2,5,6,3,1,4]">256314</option>
+				<option value="[2,5,6,3,4,1]">256341</option>
+				<option value="[2,5,6,4,1,3]">256413</option>
+				<option value="[2,5,6,4,3,1]">256431</option>
+				<option value="[2,6,1,3,4,5]">261345</option>
+				<option value="[6,3,1,2,5,4]">631254</option>
+				<option value="[6,3,1,4,2,5]">631425</option>
+				<option value="[6,3,1,4,5,2]">631452</option>
+				<option value="[6,3,1,5,2,4]">631524</option>
+				<option value="[6,3,1,5,4,2]">631542</option>
+				<option value="[6,3,2,1,4,5]">632145</option>
+				<option value="[6,3,2,1,5,4]">632154</option>
+				<option value="[6,3,2,4,1,5]">632415</option>
+				<option value="[6,3,2,4,5,1]">632451</option>
+				<option value="[6,3,2,5,1,4]">632514</option>
+				<option value="[6,3,2,5,4,1]">632541</option>
+				<option value="[6,3,4,1,2,5]">634125</option>
+				<option value="[6,3,4,1,5,2]">634152</option>
+				<option value="[6,3,4,2,1,5]">634215</option>
+				<option value="[6,3,4,2,5,1]">634251</option>
+				<option value="[6,3,4,5,1,2]">634512</option>
+				<option value="[6,3,4,5,2,1]">634521</option>
+				<option value="[6,3,5,1,2,4]">635124</option>
+				<option value="[6,4,3,2,1,5]">643215</option>
+				<option value="[6,4,3,2,5,1]">643251</option>
+				<option value="[6,4,3,5,1,2]">643512</option>
+				<option value="[6,5,4,1,3,2]">654132</option>
+				<option value="[6,5,4,2,1,3]">654213</option>
+				<option value="[6,5,4,2,3,1]">654231</option>
+				<option value="[6,1,4,3,5,2]">614352</option>
+				<option value="[6,1,4,5,2,3]">614523</option>
+				<option value="[6,1,4,5,3,2]">614532</option>
+				<option value="[6,1,5,2,3,4]">615234</option>
+				<option value="[6,1,5,2,4,3]">615243</option>
+				<option value="[6,1,5,3,2,4]">615324</option>
+				<option value="[6,1,5,3,4,2]">615342</option>
+				<option value="[6,1,5,4,2,3]">615423</option>
+				<option value="[6,1,5,4,3,2]">615432</option>
+				<option value="[6,2,1,3,4,5]">621345</option>
+				<option value="[6,2,1,3,5,4]">621354</option>
+				<option value="[6,2,1,4,3,5]">621435</option>
+				<option value="[6,2,1,4,5,3]">621453</option>
+				<option value="[6,2,1,5,3,4]">621534</option>
+				<option value="[6,2,1,5,4,3]">621543</option>
+				<option value="[2,6,1,3,5,4]">261354</option>
+				<option value="[2,6,1,4,3,5]">261435</option>
+				<option value="[2,6,1,4,5,3]">261453</option>
+				<option value="[2,6,1,5,3,4]">261534</option>
+				<option value="[2,6,1,5,4,3]">261543</option>
+				<option value="[2,6,3,1,4,5]">263145</option>
+				<option value="[2,6,3,1,5,4]">263154</option>
+				<option value="[2,6,3,4,1,5]">263415</option>
+				<option value="[2,6,3,4,5,1]">263451</option>
+				<option value="[2,6,3,5,1,4]">263514</option>
+				<option value="[2,6,3,5,4,1]">263541</option>
+				<option value="[2,6,4,1,3,5]">264135</option>
+				<option value="[2,6,4,1,5,3]">264153</option>
+				<option value="[2,6,4,3,1,5]">264315</option>
+				<option value="[2,6,4,3,5,1]">264351</option>
+				<option value="[2,6,4,5,1,3]">264513</option>
+				<option value="[2,6,4,5,3,1]">264531</option>
+				<option value="[2,6,5,1,3,4]">265134</option>
+				<option value="[2,6,5,1,4,3]">265143</option>
+				<option value="[2,6,5,3,1,4]">265314</option>
+				<option value="[2,6,5,3,4,1]">265341</option>
+				<option value="[2,6,5,4,1,3]">265413</option>
+				<option value="[2,6,5,4,3,1]">265431</option>
+				<option value="[3,1,2,4,5,6]">312456</option>
+				<option value="[3,1,2,4,6,5]">312465</option>
+				<option value="[3,1,2,5,4,6]">312546</option>
+				<option value="[3,1,2,5,6,4]">312564</option>
+				<option value="[3,1,2,6,4,5]">312645</option>
+				<option value="[3,1,2,6,5,4]">312654</option>
+				<option value="[3,1,4,2,5,6]">314256</option>
+				<option value="[3,1,4,2,6,5]">314265</option>
+				<option value="[3,1,4,5,2,6]">314526</option>
+				<option value="[3,1,4,5,6,2]">314562</option>
+				<option value="[3,1,4,6,2,5]">314625</option>
+				<option value="[3,1,4,6,5,2]">314652</option>
+				<option value="[3,1,5,2,4,6]">315246</option>
+				<option value="[3,1,5,2,6,4]">315264</option>
+				<option value="[3,1,5,4,2,6]">315426</option>
+				<option value="[3,1,5,4,6,2]">315462</option>
+				<option value="[3,1,5,6,2,4]">315624</option>
+				<option value="[3,1,5,6,4,2]">315642</option>
+				<option value="[3,1,6,2,4,5]">316245</option>
+				<option value="[3,1,6,2,5,4]">316254</option>
+				<option value="[3,1,6,4,2,5]">316425</option>
+				<option value="[3,1,6,4,5,2]">316452</option>
+				<option value="[3,1,6,5,2,4]">316524</option>
+				<option value="[3,1,6,5,4,2]">316542</option>
+				<option value="[3,2,1,4,5,6]">321456</option>
+				<option value="[3,2,1,4,6,5]">321465</option>
+				<option value="[3,2,1,5,4,6]">321546</option>
+				<option value="[3,2,1,5,6,4]">321564</option>
+				<option value="[3,2,1,6,4,5]">321645</option>
+				<option value="[3,2,1,6,5,4]">321654</option>
+				<option value="[3,2,4,1,5,6]">324156</option>
+				<option value="[3,2,4,1,6,5]">324165</option>
+				<option value="[3,2,4,5,1,6]">324516</option>
+				<option value="[3,2,4,5,6,1]">324561</option>
+				<option value="[3,2,4,6,1,5]">324615</option>
+				<option value="[3,2,4,6,5,1]">324651</option>
+				<option value="[3,2,5,1,4,6]">325146</option>
+				<option value="[3,2,5,1,6,4]">325164</option>
+				<option value="[3,2,5,4,1,6]">325416</option>
+				<option value="[3,2,5,4,6,1]">325461</option>
+				<option value="[3,2,5,6,1,4]">325614</option>
+				<option value="[3,2,5,6,4,1]">325641</option>
+				<option value="[3,2,6,1,4,5]">326145</option>
+				<option value="[3,2,6,1,5,4]">326154</option>
+				<option value="[3,2,6,4,1,5]">326415</option>
+				<option value="[3,2,6,4,5,1]">326451</option>
+				<option value="[3,2,6,5,1,4]">326514</option>
+				<option value="[3,2,6,5,4,1]">326541</option>
+				<option value="[3,4,1,2,5,6]">341256</option>
+				<option value="[3,4,1,2,6,5]">341265</option>
+				<option value="[3,4,1,5,2,6]">341526</option>
+				<option value="[3,4,1,5,6,2]">341562</option>
+				<option value="[3,4,1,6,2,5]">341625</option>
+				<option value="[3,4,1,6,5,2]">341652</option>
+				<option value="[3,4,2,1,5,6]">342156</option>
+				<option value="[3,4,2,1,6,5]">342165</option>
+				<option value="[3,4,2,5,1,6]">342516</option>
+				<option value="[3,4,2,5,6,1]">342561</option>
+				<option value="[3,4,2,6,1,5]">342615</option>
+				<option value="[3,4,2,6,5,1]">342651</option>
+				<option value="[3,4,5,1,2,6]">345126</option>
+				<option value="[3,4,5,1,6,2]">345162</option>
+				<option value="[3,4,5,2,1,6]">345216</option>
+				<option value="[3,4,5,2,6,1]">345261</option>
+				<option value="[3,4,5,6,1,2]">345612</option>
+				<option value="[3,4,5,6,2,1]">345621</option>
+				<option value="[3,4,6,1,2,5]">346125</option>
+				<option value="[3,4,6,1,5,2]">346152</option>
+				<option value="[3,4,6,2,1,5]">346215</option>
+				<option value="[3,4,6,2,5,1]">346251</option>
+				<option value="[3,4,6,5,1,2]">346512</option>
+				<option value="[3,4,6,5,2,1]">346521</option>
+				<option value="[3,5,1,2,4,6]">351246</option>
+				<option value="[3,5,1,2,6,4]">351264</option>
+				<option value="[3,5,1,4,2,6]">351426</option>
+				<option value="[3,5,1,4,6,2]">351462</option>
+				<option value="[3,5,1,6,2,4]">351624</option>
+				<option value="[3,5,1,6,4,2]">351642</option>
+				<option value="[3,5,2,1,4,6]">352146</option>
+				<option value="[3,5,2,1,6,4]">352164</option>
+				<option value="[3,5,2,4,1,6]">352416</option>
+				<option value="[3,5,2,4,6,1]">352461</option>
+				<option value="[3,5,2,6,1,4]">352614</option>
+				<option value="[3,5,2,6,4,1]">352641</option>
+				<option value="[3,5,4,1,2,6]">354126</option>
+				<option value="[3,5,4,1,6,2]">354162</option>
+				<option value="[3,5,4,2,1,6]">354216</option>
+				<option value="[3,5,4,2,6,1]">354261</option>
+				<option value="[3,5,4,6,1,2]">354612</option>
+				<option value="[3,5,4,6,2,1]">354621</option>
+				<option value="[3,5,6,1,2,4]">356124</option>
+				<option value="[3,5,6,1,4,2]">356142</option>
+				<option value="[3,5,6,2,1,4]">356214</option>
+				<option value="[3,5,6,2,4,1]">356241</option>
+				<option value="[3,5,6,4,1,2]">356412</option>
+				<option value="[3,5,6,4,2,1]">356421</option>
+				<option value="[3,6,1,2,4,5]">361245</option>
+				<option value="[3,6,1,2,5,4]">361254</option>
+				<option value="[3,6,1,4,2,5]">361425</option>
+				<option value="[3,6,1,4,5,2]">361452</option>
+				<option value="[3,6,1,5,2,4]">361524</option>
+				<option value="[3,6,1,5,4,2]">361542</option>
+				<option value="[3,6,2,1,4,5]">362145</option>
+				<option value="[3,6,2,1,5,4]">362154</option>
+				<option value="[3,6,2,4,1,5]">362415</option>
+				<option value="[3,6,2,4,5,1]">362451</option>
+				<option value="[3,6,2,5,1,4]">362514</option>
+				<option value="[3,6,2,5,4,1]">362541</option>
+				<option value="[3,6,4,1,2,5]">364125</option>
+				<option value="[3,6,4,1,5,2]">364152</option>
+				<option value="[3,6,4,2,1,5]">364215</option>
+				<option value="[3,6,4,2,5,1]">364251</option>
+				<option value="[3,6,4,5,1,2]">364512</option>
+				<option value="[3,6,4,5,2,1]">364521</option>
+				<option value="[3,6,5,1,2,4]">365124</option>
+				<option value="[3,6,5,1,4,2]">365142</option>
+				<option value="[3,6,5,2,1,4]">365214</option>
+				<option value="[3,6,5,2,4,1]">365241</option>
+				<option value="[3,6,5,4,1,2]">365412</option>
+				<option value="[3,6,5,4,2,1]">365421</option>
+				<option value="[4,1,2,3,5,6]">412356</option>
+				<option value="[4,1,2,3,6,5]">412365</option>
+				<option value="[4,1,2,5,3,6]">412536</option>
+				<option value="[4,1,2,5,6,3]">412563</option>
+				<option value="[4,1,2,6,3,5]">412635</option>
+				<option value="[4,1,2,6,5,3]">412653</option>
+				<option value="[4,1,3,2,5,6]">413256</option>
+				<option value="[4,1,3,2,6,5]">413265</option>
+				<option value="[4,1,3,5,2,6]">413526</option>
+				<option value="[4,1,3,5,6,2]">413562</option>
+				<option value="[4,1,3,6,2,5]">413625</option>
+				<option value="[4,1,3,6,5,2]">413652</option>
+				<option value="[4,1,5,2,3,6]">415236</option>
+				<option value="[4,1,5,2,6,3]">415263</option>
+				<option value="[4,1,5,3,2,6]">415326</option>
+				<option value="[4,1,5,3,6,2]">415362</option>
+				<option value="[4,1,5,6,2,3]">415623</option>
+				<option value="[4,1,5,6,3,2]">415632</option>
+				<option value="[4,1,6,2,3,5]">416235</option>
+				<option value="[4,1,6,2,5,3]">416253</option>
+				<option value="[4,1,6,3,2,5]">416325</option>
+				<option value="[4,1,6,3,5,2]">416352</option>
+				<option value="[4,1,6,5,2,3]">416523</option>
+				<option value="[4,1,6,5,3,2]">416532</option>
+				<option value="[4,2,1,3,5,6]">421356</option>
+				<option value="[4,2,1,3,6,5]">421365</option>
+				<option value="[4,2,1,5,3,6]">421536</option>
+				<option value="[4,2,1,5,6,3]">421563</option>
+				<option value="[4,2,1,6,3,5]">421635</option>
+				<option value="[4,2,1,6,5,3]">421653</option>
+				<option value="[4,2,3,1,5,6]">423156</option>
+				<option value="[4,2,3,1,6,5]">423165</option>
+				<option value="[4,2,3,5,1,6]">423516</option>
+				<option value="[4,2,3,5,6,1]">423561</option>
+				<option value="[4,2,3,6,1,5]">423615</option>
+				<option value="[4,2,3,6,5,1]">423651</option>
+				<option value="[4,2,5,1,3,6]">425136</option>
+				<option value="[4,2,5,1,6,3]">425163</option>
+				<option value="[4,2,5,3,1,6]">425316</option>
+				<option value="[4,2,5,3,6,1]">425361</option>
+				<option value="[4,2,5,6,1,3]">425613</option>
+				<option value="[4,2,5,6,3,1]">425631</option>
+				<option value="[4,2,6,1,3,5]">426135</option>
+				<option value="[4,2,6,1,5,3]">426153</option>
+				<option value="[4,2,6,3,1,5]">426315</option>
+				<option value="[4,2,6,3,5,1]">426351</option>
+				<option value="[4,2,6,5,1,3]">426513</option>
+				<option value="[4,2,6,5,3,1]">426531</option>
+				<option value="[4,3,1,2,5,6]">431256</option>
+				<option value="[4,3,1,2,6,5]">431265</option>
+				<option value="[4,3,1,5,2,6]">431526</option>
+				<option value="[4,3,1,5,6,2]">431562</option>
+				<option value="[4,3,1,6,2,5]">431625</option>
+				<option value="[4,3,1,6,5,2]">431652</option>
+				<option value="[4,3,2,1,5,6]">432156</option>
+				<option value="[4,3,2,1,6,5]">432165</option>
+				<option value="[4,3,2,5,1,6]">432516</option>
+				<option value="[4,3,2,5,6,1]">432561</option>
+				<option value="[4,3,2,6,1,5]">432615</option>
+				<option value="[4,3,2,6,5,1]">432651</option>
+				<option value="[4,3,5,1,2,6]">435126</option>
+				<option value="[4,3,5,1,6,2]">435162</option>
+				<option value="[4,3,5,2,1,6]">435216</option>
+				<option value="[4,3,5,2,6,1]">435261</option>
+				<option value="[4,3,5,6,1,2]">435612</option>
+				<option value="[4,3,5,6,2,1]">435621</option>
+				<option value="[4,3,6,1,2,5]">436125</option>
+				<option value="[4,3,6,1,5,2]">436152</option>
+				<option value="[4,3,6,2,1,5]">436215</option>
+				<option value="[4,3,6,2,5,1]">436251</option>
+				<option value="[4,3,6,5,1,2]">436512</option>
+				<option value="[4,3,6,5,2,1]">436521</option>
+				<option value="[4,5,1,2,3,6]">451236</option>
+				<option value="[6,3,5,1,4,2]">635142</option>
+				<option value="[6,3,5,2,1,4]">635214</option>
+				<option value="[6,3,5,2,4,1]">635241</option>
+				<option value="[6,3,5,4,1,2]">635412</option>
+				<option value="[6,3,5,4,2,1]">635421</option>
+				<option value="[6,4,1,2,3,5]">641235</option>
+				<option value="[6,4,1,2,5,3]">641253</option>
+				<option value="[6,4,1,3,2,5]">641325</option>
+				<option value="[6,4,1,3,5,2]">641352</option>
+				<option value="[6,4,1,5,2,3]">641523</option>
+				<option value="[6,4,1,5,3,2]">641532</option>
+				<option value="[6,4,2,1,3,5]">642135</option>
+				<option value="[6,4,2,1,5,3]">642153</option>
+				<option value="[6,4,2,3,1,5]">642315</option>
+				<option value="[6,4,2,3,5,1]">642351</option>
+				<option value="[6,4,2,5,1,3]">642513</option>
+				<option value="[6,4,2,5,3,1]">642531</option>
+				<option value="[6,4,3,1,2,5]">643125</option>
+				<option value="[6,4,3,1,5,2]">643152</option>
+				<option value="[6,4,3,5,2,1]">643521</option>
+				<option value="[6,4,5,1,2,3]">645123</option>
+				<option value="[6,4,5,1,3,2]">645132</option>
+				<option value="[6,4,5,2,1,3]">645213</option>
+				<option value="[6,4,5,2,3,1]">645231</option>
+				<option value="[6,3,1,2,4,5]">631245</option>
+				<option value="[6,4,5,3,1,2]">645312</option>
+				<option value="[6,4,5,3,2,1]">645321</option>
+				<option value="[6,5,1,2,3,4]">651234</option>
+				<option value="[6,5,1,2,4,3]">651243</option>
+				<option value="[6,5,1,3,2,4]">651324</option>
+				<option value="[6,5,1,3,4,2]">651342</option>
+				<option value="[6,5,1,4,2,3]">651423</option>
+				<option value="[6,5,1,4,3,2]">651432</option>
+				<option value="[6,5,2,1,3,4]">652134</option>
+				<option value="[6,5,2,1,4,3]">652143</option>
+				<option value="[6,5,2,3,1,4]">652314</option>
+				<option value="[6,5,2,3,4,1]">652341</option>
+				<option value="[6,5,2,4,1,3]">652413</option>
+				<option value="[6,5,2,4,3,1]">652431</option>
+				<option value="[4,5,1,2,6,3]">451263</option>
+				<option value="[4,5,1,3,2,6]">451326</option>
+				<option value="[4,5,1,3,6,2]">451362</option>
+				<option value="[4,5,1,6,2,3]">451623</option>
+				<option value="[4,5,1,6,3,2]">451632</option>
+				<option value="[4,5,2,1,3,6]">452136</option>
+				<option value="[4,5,2,1,6,3]">452163</option>
+				<option value="[4,5,2,3,1,6]">452316</option>
+				<option value="[4,5,2,3,6,1]">452361</option>
+				<option value="[4,5,2,6,1,3]">452613</option>
+				<option value="[4,5,2,6,3,1]">452631</option>
+				<option value="[4,5,3,1,2,6]">453126</option>
+				<option value="[4,5,3,1,6,2]">453162</option>
+				<option value="[4,5,3,2,1,6]">453216</option>
+				<option value="[4,5,3,2,6,1]">453261</option>
+				<option value="[4,5,3,6,1,2]">453612</option>
+				<option value="[4,5,3,6,2,1]">453621</option>
+				<option value="[4,5,6,1,2,3]">456123</option>
+				<option value="[4,5,6,1,3,2]">456132</option>
+				<option value="[4,5,6,2,1,3]">456213</option>
+				<option value="[4,5,6,2,3,1]">456231</option>
+				<option value="[4,5,6,3,1,2]">456312</option>
+				<option value="[4,5,6,3,2,1]">456321</option>
+				<option value="[4,6,1,2,3,5]">461235</option>
+				<option value="[4,6,1,2,5,3]">461253</option>
+				<option value="[4,6,1,3,2,5]">461325</option>
+				<option value="[4,6,1,3,5,2]">461352</option>
+				<option value="[4,6,1,5,2,3]">461523</option>
+				<option value="[4,6,1,5,3,2]">461532</option>
+				<option value="[4,6,2,1,3,5]">462135</option>
+				<option value="[4,6,2,1,5,3]">462153</option>
+				<option value="[4,6,2,3,1,5]">462315</option>
+				<option value="[4,6,2,3,5,1]">462351</option>
+				<option value="[4,6,2,5,1,3]">462513</option>
+				<option value="[4,6,2,5,3,1]">462531</option>
+				<option value="[4,6,3,1,2,5]">463125</option>
+				<option value="[4,6,3,1,5,2]">463152</option>
+				<option value="[4,6,3,2,1,5]">463215</option>
+				<option value="[4,6,3,2,5,1]">463251</option>
+				<option value="[4,6,3,5,1,2]">463512</option>
+				<option value="[4,6,3,5,2,1]">463521</option>
+				<option value="[4,6,5,1,2,3]">465123</option>
+				<option value="[4,6,5,1,3,2]">465132</option>
+				<option value="[4,6,5,2,1,3]">465213</option>
+				<option value="[4,6,5,2,3,1]">465231</option>
+				<option value="[4,6,5,3,1,2]">465312</option>
+				<option value="[4,6,5,3,2,1]">465321</option>
+				<option value="[5,1,2,3,4,6]">512346</option>
+				<option value="[5,1,2,3,6,4]">512364</option>
+				<option value="[5,1,2,4,3,6]">512436</option>
+				<option value="[5,1,2,4,6,3]">512463</option>
+				<option value="[5,1,2,6,3,4]">512634</option>
+				<option value="[5,1,2,6,4,3]">512643</option>
+				<option value="[5,1,3,2,4,6]">513246</option>
+				<option value="[5,1,3,2,6,4]">513264</option>
+				<option value="[5,1,3,4,2,6]">513426</option>
+				<option value="[5,1,3,4,6,2]">513462</option>
+				<option value="[5,1,3,6,2,4]">513624</option>
+				<option value="[5,1,3,6,4,2]">513642</option>
+				<option value="[5,1,4,2,3,6]">514236</option>
+				<option value="[5,1,4,2,6,3]">514263</option>
+				<option value="[5,1,4,3,2,6]">514326</option>
+				<option value="[5,1,4,3,6,2]">514362</option>
+				<option value="[5,1,4,6,2,3]">514623</option>
+				<option value="[5,1,4,6,3,2]">514632</option>
+				<option value="[5,1,6,2,3,4]">516234</option>
+				<option value="[5,1,6,2,4,3]">516243</option>
+				<option value="[5,1,6,3,2,4]">516324</option>
+				<option value="[5,1,6,3,4,2]">516342</option>
+				<option value="[5,1,6,4,2,3]">516423</option>
+				<option value="[5,1,6,4,3,2]">516432</option>
+				<option value="[5,2,1,3,4,6]">521346</option>
+				<option value="[5,2,1,3,6,4]">521364</option>
+				<option value="[5,2,1,4,3,6]">521436</option>
+				<option value="[5,2,1,4,6,3]">521463</option>
+				<option value="[5,2,1,6,3,4]">521634</option>
+				<option value="[5,2,1,6,4,3]">521643</option>
+				<option value="[5,2,3,1,4,6]">523146</option>
+				<option value="[5,2,3,1,6,4]">523164</option>
+				<option value="[5,2,3,4,1,6]">523416</option>
+				<option value="[5,2,3,4,6,1]">523461</option>
+				<option value="[5,2,3,6,1,4]">523614</option>
+				<option value="[5,2,3,6,4,1]">523641</option>
+				<option value="[5,2,4,1,3,6]">524136</option>
+				<option value="[5,2,4,1,6,3]">524163</option>
+				<option value="[5,2,4,3,1,6]">524316</option>
+				<option value="[5,2,4,3,6,1]">524361</option>
+				<option value="[5,2,4,6,1,3]">524613</option>
+				<option value="[5,2,4,6,3,1]">524631</option>
+				<option value="[5,2,6,1,3,4]">526134</option>
+				<option value="[5,2,6,1,4,3]">526143</option>
+				<option value="[5,2,6,3,1,4]">526314</option>
+				<option value="[5,2,6,3,4,1]">526341</option>
+				<option value="[5,2,6,4,1,3]">526413</option>
+				<option value="[5,2,6,4,3,1]">526431</option>
+				<option value="[5,3,1,2,4,6]">531246</option>
+				<option value="[5,3,1,2,6,4]">531264</option>
+				<option value="[5,3,1,4,2,6]">531426</option>
+				<option value="[5,3,1,4,6,2]">531462</option>
+				<option value="[5,3,1,6,2,4]">531624</option>
+				<option value="[5,3,1,6,4,2]">531642</option>
+				<option value="[5,3,2,1,4,6]">532146</option>
+				<option value="[5,3,2,1,6,4]">532164</option>
+				<option value="[5,3,2,4,1,6]">532416</option>
+				<option value="[5,3,2,4,6,1]">532461</option>
+				<option value="[5,3,2,6,1,4]">532614</option>
+				<option value="[5,3,2,6,4,1]">532641</option>
+				<option value="[5,3,4,1,2,6]">534126</option>
+				<option value="[5,3,4,1,6,2]">534162</option>
+				<option value="[5,3,4,2,1,6]">534216</option>
+				<option value="[5,3,4,2,6,1]">534261</option>
+				<option value="[5,3,4,6,1,2]">534612</option>
+				<option value="[5,3,4,6,2,1]">534621</option>
+				<option value="[5,3,6,1,2,4]">536124</option>
+				<option value="[5,3,6,1,4,2]">536142</option>
+				<option value="[5,3,6,2,1,4]">536214</option>
+				<option value="[5,3,6,2,4,1]">536241</option>
+				<option value="[5,3,6,4,1,2]">536412</option>
+				<option value="[5,3,6,4,2,1]">536421</option>
+				<option value="[5,4,1,2,3,6]">541236</option>
+				<option value="[5,4,1,2,6,3]">541263</option>
+				<option value="[5,4,1,3,2,6]">541326</option>
+				<option value="[5,4,1,3,6,2]">541362</option>
+				<option value="[5,4,1,6,2,3]">541623</option>
+				<option value="[5,4,1,6,3,2]">541632</option>
+				<option value="[5,4,2,1,3,6]">542136</option>
+				<option value="[5,4,2,1,6,3]">542163</option>
+				<option value="[5,4,2,3,1,6]">542316</option>
+				<option value="[5,4,2,3,6,1]">542361</option>
+				<option value="[5,4,2,6,1,3]">542613</option>
+				<option value="[5,4,2,6,3,1]">542631</option>
+				<option value="[5,4,3,1,2,6]">543126</option>
+				<option value="[5,4,3,1,6,2]">543162</option>
+				<option value="[5,4,3,2,1,6]">543216</option>
+				<option value="[5,4,3,2,6,1]">543261</option>
+				<option value="[5,4,3,6,1,2]">543612</option>
+				<option value="[5,4,3,6,2,1]">543621</option>
+				<option value="[5,4,6,1,2,3]">546123</option>
+				<option value="[5,4,6,1,3,2]">546132</option>
+				<option value="[5,4,6,2,1,3]">546213</option>
+				<option value="[5,4,6,2,3,1]">546231</option>
+				<option value="[5,4,6,3,1,2]">546312</option>
+				<option value="[5,4,6,3,2,1]">546321</option>
+				<option value="[5,6,1,2,3,4]">561234</option>
+				<option value="[5,6,1,2,4,3]">561243</option>
+				<option value="[5,6,1,3,2,4]">561324</option>
+				<option value="[5,6,1,3,4,2]">561342</option>
+				<option value="[5,6,1,4,2,3]">561423</option>
+				<option value="[5,6,1,4,3,2]">561432</option>
+				<option value="[5,6,2,1,3,4]">562134</option>
+				<option value="[5,6,2,1,4,3]">562143</option>
+				<option value="[5,6,2,3,1,4]">562314</option>
+				<option value="[5,6,2,3,4,1]">562341</option>
+				<option value="[5,6,2,4,1,3]">562413</option>
+				<option value="[5,6,2,4,3,1]">562431</option>
+				<option value="[5,6,3,1,2,4]">563124</option>
+				<option value="[5,6,3,1,4,2]">563142</option>
+				<option value="[5,6,3,2,1,4]">563214</option>
+				<option value="[5,6,3,2,4,1]">563241</option>
+				<option value="[5,6,3,4,1,2]">563412</option>
+				<option value="[5,6,3,4,2,1]">563421</option>
+				<option value="[5,6,4,1,2,3]">564123</option>
+				<option value="[5,6,4,1,3,2]">564132</option>
+				<option value="[5,6,4,2,1,3]">564213</option>
+				<option value="[5,6,4,2,3,1]">564231</option>
+				<option value="[5,6,4,3,1,2]">564312</option>
+				<option value="[5,6,4,3,2,1]">564321</option>
+				<option value="[6,1,2,3,4,5]">612345</option>
+				<option value="[6,1,2,3,5,4]">612354</option>
+				<option value="[6,1,2,4,3,5]">612435</option>
+				<option value="[6,1,2,4,5,3]">612453</option>
+				<option value="[6,1,2,5,3,4]">612534</option>
+				<option value="[6,1,2,5,4,3]">612543</option>
+				<option value="[6,1,3,2,4,5]">613245</option>
+				<option value="[6,1,3,2,5,4]">613254</option>
+				<option value="[6,1,3,4,2,5]">613425</option>
+				<option value="[6,1,3,4,5,2]">613452</option>
+				<option value="[6,1,3,5,2,4]">613524</option>
+				<option value="[6,1,3,5,4,2]">613542</option>
+				<option value="[6,1,4,2,3,5]">614235</option>
+				<option value="[6,1,4,2,5,3]">614253</option>
+				<option value="[6,1,4,3,2,5]">614325</option>
+				<option value="[6,2,3,1,4,5]">623145</option>
+				<option value="[6,2,3,1,5,4]">623154</option>
+				<option value="[6,2,3,4,1,5]">623415</option>
+				<option value="[6,2,3,4,5,1]">623451</option>
+				<option value="[6,2,3,5,1,4]">623514</option>
+				<option value="[6,2,3,5,4,1]">623541</option>
+				<option value="[6,2,4,1,3,5]">624135</option>
+				<option value="[6,2,4,1,5,3]">624153</option>
+				<option value="[6,2,4,3,1,5]">624315</option>
+				<option value="[6,2,4,3,5,1]">624351</option>
+				<option value="[6,2,4,5,1,3]">624513</option>
+				<option value="[6,2,4,5,3,1]">624531</option>
+				<option value="[6,2,5,1,3,4]">625134</option>
+				<option value="[6,2,5,1,4,3]">625143</option>
+				<option value="[6,2,5,3,1,4]">625314</option>
+				<option value="[6,2,5,3,4,1]">625341</option>
+				<option value="[6,2,5,4,1,3]">625413</option>
+				<option value="[6,2,5,4,3,1]">625431</option>
+				<option value="[6,5,3,1,2,4]">653124</option>
+				<option value="[6,5,3,1,4,2]">653142</option>
+				<option value="[6,5,3,2,1,4]">653214</option>
+				<option value="[6,5,3,2,4,1]">653241</option>
+				<option value="[6,5,3,4,1,2]">653412</option>
+				<option value="[6,5,3,4,2,1]">653421</option>
+				<option value="[6,5,4,1,2,3]">654123</option>
+				<option value="[6,5,4,3,1,2]">654312</option>
+				<option value="[6,5,4,3,2,1]">654321</option>
+			</select>
+            - or -
+            <button id="randomChoice" class="btn">Random choice</button>
+            </form>
+		</div>
+		<div id="storyParts">
+			<div id="part1" class="storyPart" data-order="1">
+				<h3>[1]</h3>
+				<p>Dante folded his long overcoat neatly and placed it on the chair. He took off his cufflinks, each ornamented with the face of a tiny clock, placing them carefully on top of the coat. Rolling up his cuffs to his forearms, he took a last good look up and down the hotel corridor and took out the stout pocket watch from his waistcoat. He checked the time then clicked a hidden switch.</p>
+				<p>"Dante here, looking in from the west entrance, nothing so far." A strong voice replied: "Good work Dante. Units from Order have cleared the area – you have the Governess's permission to dance."</p>
+				<p>"Understood, thank you Watchtower. Mark my dance card for me will you?"</p>
+				<p>He turned one ornate handle on the double doors, feeling for the extra weight that might indicate something attached to the 	other side.</p>
+				<p>Nothing.</p>
+				<p>Standing in the centre of the grand ball room was a great brass cylinder, wider than Dante himself and just as tall. Along its length ran clear vertical slits flashing cerise light into the darkened ball room. He started to walk toward it but the pink light focused on him. There was a blinding flash.</p>
+			</div>
+			<div id="part2" class="storyPart" data-order="2">
+				<h3>[2]</h3>
+				<p>Dante stood motionless, inches from the seven-foot high monstrosity, a brass and crystal Corinthian column. He evaluating every inch of the surface, droplets of water condensed from the air onto it.</p>
+				<p>Between two of the thin, vertical windows there was an access plate. Inspecting it, Dante found that eight small latches like lions claws held it in place. Placing himself directly before the panel he discovered that none of the flickering lights from the hulking column touched him and felt he could risk moving normally again.</p>
+				<p>He brought his pocket watch up to one of the latches and examined a reading on the watch face. Once satisfied he pushed his thumb under the latch and smoothly turned it round.</p>
+				<p>The moment the catch cleared the plate there was an intense flash.</p>
+			</div>
+			<div id="part3" class="storyPart" data-order="3">
+				<h3>[3]</h3>
+				<p>Ice covered the column in a thin layer which dimmed the pink light that pulsed from within it.</p>
+				<p>With an open umbrella before him and crouched so that he could hide behind it Dante proceeded into the room. When the point gently touched the column and he could see the play of the light through the fabric of the brolly. He slipped a tentative finger around the edge of the fabric to see if would come to any harm – it did not.</p>
+				<p>He collapsed the umbrella and scrutinised the side of the pillar: the ice seemed to be covering some inscriptions.</p>
+				<p>From his pocket Dante brought out a sturdy hip flask. After taking a quick swig of the contents he twisted the neck through several clicks and poured a blue fluid onto the ice. Where the liquid touched the ice it immediately dissolved. Now he could see the same single sequence repeated thousands of times down the panel:</p>
+				<blockquote>E = -tc2</blockquote>
+				<p>From inside his waistcoat he took a notebook and jotted down the characters. Putting away the flask, he pulled out his pocket watch again.</p>
+				<p>"Watchtower…" Was all he said before the room was consumed by a blinding flash.</p>
+			</div>
+			<div id="part4" class="storyPart" data-order="4">
+				<h3>[4]</h3>
+				<p>Dante examined the frozen chair. He pulled out his leather gloves from the pocket of his greatcoat.</p>
+				<p>Beside the chair frost crystals grew on the red carpet at the base of double doors which lead to the grand ball room. To the right of the doors was an umbrella stand and beyond that a T-junction in the corridor. Following it around Dante discovered a side door to the ball room.</p>
+				<p>The handle was deathly cold but he forced it to turn then bashed the door open with his shoulder. He emerged behind a pillar at the side of the ball room where the wallflowers of the evening would have sat watching the dance floor. Something was illuminating the room with grisly pink light-show.</p>
+				<p>Peering out from behind the column he saw a dark tower encased in ice, diffused light seeping out and sparkling on the hoary gems that were all around it. Dante extracted a canister from his long coat; attached to it was a clockwork escapement. Behind the pillar he turned the key on the mechanism several turns, hesitating then giving it an extra half turn for luck. Once he removed the key the device began to tick: Dante slung the charge around the column and sprinted back for the doorway but just as he crossed the threshold a lightning flash exploded.</p>
+			</div>
+			<div id="part5" class="storyPart" data-order="6">
+				<h3>[5]</h3>
+				<p>The frozen tunnel had a soft violet glow. Dante was confronted by an intricate brass dais. He cleared away the ice from the surface of the dais with a few waves of his pocket watch; wherever the watch faced an ultrasonic beam atomized the ice.</p>
+				<p>Two finger holes in the centre of the dais suggested that a circle, no bigger than the span of a hand, could be removed. Dante examined the disk and noted some readings from the face of his watch. He let out a chuckle as he held a jewellers loupe in one eye and gazed at the circular crack in the brass top. He checked his watch again and nodded to himself in satisfaction.</p>
+				<p>He pushed his thumb and index finger into the depressions and pulled out an intricate casement, its feathery parts clicking and whirring around a shining scarlet rod. The device shone too brightly to look at and it was because of this he didn't notice the wires trailing from the bottom of the core until they gently detached causing the housing to flare with a silent explosion of light.</p>
+			</div>
+			<div id="part6" class="storyPart" data-order="5">
+				<h3>[6]</h3>
+				<p>Cramped and sweating, despite working in an ice tunnel, Dante held up the glowing, ticking, clacking mechanism.</p>
+				<p>Looking at the tiny spinning column of brass-crystal and flowing seams of mercury through a magnifying glass he saw a static ruby core. It gave a light that drifted outward from it: slow light. He reached into the workings until the tip of his fingernail touched a near-invisible lever. All was dark and silent. Dante sighed in the quiet blackness and then fumbled for his pocket watch.</p>
+				<p>"Dante to Watchtower, the gift is defused. Would you mind telling me what time it is?"</p>
+				<p>"Watchtower to Dante: well done. The time is sixteen fifty three and forty-two seconds."</p>
+			</div>
+        </div>
+        </div>
+		<script src="../js/jquery.js"></script>
+        <script src="../js/jquery-ui.js"></script>
+        <script src="../js/bootstrap.js"></script>
+        <script src="../js/vars.js"></script>
+        <script src="../js/functions.js"></script>
+        <script src="../js/story.js"></script>
+	</body>
+</html>

@@ -1,0 +1,10 @@
+{
+    "root": "customitems",
+    "chapters": [
+    	{"name": "Test", "file": "test1.json"},
+        {"name": "Agile", "file": "agile.json"},
+        {"name": "70-480", "file": "70-480.json"},
+        {"name": "Tory?", "file": "tory.json"},
+        {"name": "Boris?", "file": "boris.json"}
+    ]
+}

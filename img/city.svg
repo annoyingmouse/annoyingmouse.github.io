@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
+<svg
+   version="1.0"
+   x="0"
+   y="0"
+   width="800.000000"
+   height="600.000000"
+   id="svg559"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   sodipodi:version="0.33beta"
+   sodipodi:docname="C:\Documents and Settings\Dominic\Desktop\messing08.svg">
+  <sodipodi:namedview
+     id="base"/>
+  <defs
+     id="defs561">
+    <linearGradient
+       id="linearGradient563">
+      <stop
+         style="stop-color:#0000ee;stop-opacity:1.0000;"
+         offset="0"
+         id="stop564"/>
+      <stop
+         style="stop-color:#000000;stop-opacity:1.0000;"
+         offset="1"
+         id="stop565"/>
+    </linearGradient>
+    <radialGradient
+       cx="0.500000"
+       cy="1.000000"
+       r="0.600000"
+       fx="0.500000"
+       fy="1.000000"
+       id="radialGradient566"
+       xlink:href="#linearGradient563"/>
+    <linearGradient
+       x1="0"
+       y1="0"
+       x2="0"
+       y2="1.000000"
+       id="linearGradient568"
+       xlink:href="#linearGradient563"/>
+  </defs>
+  <rect
+     width="800.000000"
+     height="600.000000"
+     x="0"
+     y="0"
+     style="font-size:12.000;fill:url(#radialGradient566);fill-rule:evenodd;"
+     id="rect562"/>
+  <path
+     d="M 383.6956 240.2174 C 387.9353 239.7954 388.3373 244.8370 386.1412 247.5091 C 381.5030 253.1526 372.8103 250.2138 369.1123 245.1087 C 362.5671 236.0733 367.3512 223.6115 376.3586 218.3424 C 389.4943 210.6584 406.1466 217.4983 412.8622 230.4348 C 421.7733 247.6003 412.8050 268.5598 395.9239 276.6757 C 374.7542 286.8535 349.4392 275.7260 339.9456 254.8914 C 328.4802 229.7293 341.7825 200.0342 366.5760 189.1758 C 395.7239 176.4103 429.8138 191.8965 442.0289 220.6521 C 456.1022 253.7823 438.4266 292.2760 405.7065 305.8424 C 368.5966 321.2289 325.6929 301.3601 310.7790 264.6740 C 294.0755 223.5861 316.1401 176.2679 356.7933 160.0091 C 401.8582 141.9860 453.5941 166.2484 471.1956 210.8695 C 490.5404 259.9103 464.0789 316.0665 415.4892 335.0090 C 362.4730 355.6772 301.8947 327.0155 281.6123 274.4567 C 259.6195 217.4656 290.4823 152.4637 347.0107 130.8425 C 407.9762 107.5241 477.4030 140.5887 500.3622 201.0868 C 525.0070 266.0265 489.7401 339.8791 425.2719 364.1757 C 356.3583 390.1476 278.0790 352.6778 252.4456 284.2393 C 225.1461 211.3522 264.8190 128.6455 337.2280 101.6758 C 414.0887 73.04805 501.2233 114.9245 529.5289 191.3042 C 559.4852 272.1381 515.4049 363.7013 435.0545 393.3423 C 350.2473 424.6275 254.2553 378.3433 223.2790 294.0220 C 190.6646 205.2417 239.1530 104.8205 327.4453 72.50915 C 420.1986 38.56532 525.0494 89.25811 558.6955 181.5215 "
+     transform="translate(-0.479507,-33.47282)"
+     style="font-size:12.000;fill:none;fill-rule:evenodd;stroke:#f29400;stroke-width:12.50000;stroke-linecap:round;"
+     id="path572">
+     <animateTransform
+       attributeName="transform"
+       type="rotate"
+       values="360 383.6956 240.2174; 0 383.6956 240.2174"
+       begin="0s"
+       dur="75s"
+       repeatCount="indefinite"/>
+  </path>
+  <path
+     d="M 0 600 L 20.00000 90.00000 L 110.0000 90.00000 L 110.0000 520 L 200 530 L 200 200 L 280 160 L 310 520 L 410 520 L 420 80.00000 L 530 60.00000 L 490 530 L 600 530 L 590 180 L 670 140 L 670 540 L 730 520 L 720 110.0000 L 780 80.00000 L 800 600 L 0 600 z "
+     style="fill:url(#linearGradient568);fill-rule:evenodd;"
+     id="path567"/>
+  <path
+     d="M 0 600 L 30.00000 200 L 120.0000 180 L 80.00000 530 L 160 520 L 160 260 L 240 220 L 270 500 L 330 500 L 330 160 L 460 180 L 440 500 L 550 510 L 530 230 L 640 210 L 630 540 L 700 550 L 690 260 L 770 240 L 800 600 L 0 600 z "
+     style="fill:url(#linearGradient568);fill-rule:evenodd;"
+     id="path569"/>
+  <path
+     d="M 0 600 L 0 250 L 60.00000 250 L 80.00000 540 L 130 540 L 130 370 L 270 360 L 240 530 L 310 540 L 290 390 L 380 360 L 380 530 L 470 490 L 420 310 L 490 310 L 530 530 L 590 520 L 590 340 L 650 340 L 650 510 L 690 540 L 720 330 L 800 350 L 800 600 L 0 600 z "
+     style="fill:url(#linearGradient568);fill-rule:evenodd;"
+     id="path570"/>
+  <path
+     d="M 0 600 L 0 550 L 30.00000 560 L 30.00000 440 L 60.00000 440 L 80.00000 560 L 110.0000 560 L 150 460 L 200 450 L 210 560 L 260 570 L 270 500 L 290 450 L 310 490 L 320 450 L 340 490 L 350 450 L 370 490 L 390 490 L 390 380 L 420 380 L 430 570 L 460 560 L 480 430 L 530 430 L 540 560 L 570 570 L 570 480 L 630 480 L 620 560 L 710 570 L 720 410 L 780 410 L 770 560 L 800 540 L 800 600 L 0 600 z "
+     style="fill:url(#linearGradient568);fill-rule:evenodd;"
+     id="path571"/>
+</svg>

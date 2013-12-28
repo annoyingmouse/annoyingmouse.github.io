@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>g·Raphaël Static Bar Charts</title>
+        <link rel="stylesheet" href="./css/main.css" media="screen">
+        <script src="./js/raphael.js"></script>
+        <script src="./js/g.raphael-min.js"></script>
+        <script src="./js/g.bar-min.js"></script>
+        <script>
+            window.onload = function () {
+                var data = {
+                    "title": "Single Series Chart",
+                    "values": [55, 20, 13, 32, 5, 1, 2, 10]
+                };
+                var r = Raphael("holder");
+                var txtattr = { font: "12px sans-serif" };
+                r.text(310, 10, data.title).attr(txtattr);
+                r.barchart(10, 10, 620, 440, [data.values], {});
+            };
+        </script>
+    </head>
+    <body class="raphael">
+        <div id="holder"></div>
+    </body>
+</html>

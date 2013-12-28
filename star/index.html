@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Star</title>
+        <link rel="stylesheet" href="../css/jquery-ui.css" type="text/css" media="all" />
+        <link href="../css/star.css" rel="stylesheet"/>
+        <link href="../css/bootstrap.css" rel="stylesheet"/>
+        <link href="../css/bootstrap-responsive.css" rel="stylesheet"/>
+        <!--[if lt IE 9]>
+        <script src="../js/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="../">GDrive</a>
+                    <div class="nav-collapse">
+                        <ul class="nav" id="siteLinks"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div id="starHolder"></div>
+        </div>
+        <script src="../js/jquery.js"></script>
+        <script src="../js/jquery-migrate-1.0.0.js"></script>
+        <script src="../js/bootstrap.js"></script>
+        <script src="../js/raphael.js"></script>
+        <script src="../js/raphael.ben.js"></script>
+        <script src="../js/vars.js"></script>
+        <script src="../js/functions.js"></script>
+        <script src="../js/jquery.qtip-1.0.0-rc3.js"></script>
+        <script>
+            var score1 = {title:"12/12/2012","scores":[10,7,10,2,3,4]};
+            var score2 = {title:"01/12/2012","scores":[1,2,3,4,5,6]};
+            $(function(){
+                var paper = Raphael("starHolder", 800, 600);
+                var points = ["promoting\ngood health","meeting\nemotional needs","keeping your\nchild safe","social networks","supporting\nlearning","setting\nboundaries"];
+                paper.drawStar(points);
+                var metrics = ["promoting good health","meeting emotional needs","keeping your child safe","social networks","supporting learning","setting boundaries","keeping a family routine","providing home and money"];
+                var stages = ["1 - Stuck", "2 - Stuck", "3 - Aware", "4 - Aware", "5 - Trying", "6 - Trying", "7 - Finding What Works", "8 - Finding What Works", "9 - Effective Parenting", "10 - Effective Parenting"];
+                var stageC = ["#c73537","#c73537","#df701a","#df701a","#a18c1d","#a18c1d","#8bc11c","#8bc11c","#63b328","#63b328"];
+                paper.star(metrics, stages, stageC, score1, "#f00");
+                paper.star(metrics, stages, stageC, score2, "#0f0");
+            });
+        </script>
+    </body>
+</html>

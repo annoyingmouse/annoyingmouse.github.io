@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exam Preparation jQuery Tool</title>
+        <script src="./js/jquery.js"></script>    
+        <script src="./js/jquery-ui.js"></script>
+        <link rel="stylesheet" href="./css/jquery-ui.css" type="text/css" media="all" />
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <div align="right">
+            <select id="paper">
+                <option value="test1.json">Test</option>
+            </select>
+            <button onclick="getCustomQuestionSet();">Get Custom</button>
+        </div>
+        <script>
+            $(function(){
+                prepareExam("test1.json", "body");
+            });
+            function prepareExam(paper, target){
+                $.getJSON(paper, function (exam) {
+                    $.each(exam.exam, function (i, question) {
+                        alert(question.question);
+                    });
+                });
+            }
+
+
+
+            function getCustomQuestionSet() {
+                $.getJSON("custom.json", function (data) {
+                    //Blank and reset the drop down.
+                    $("select#paper").empty();
+                    $.each(data.chapters, function (k, v) {
+                        $("select#paper").append('<option value="'+v.file+'">'+v.name+'</option>');
+                    });
+                }).fail(function (jqxhr, textStatus, error) {
+                    var err = textStatus + " - " + error;
+                    console.log("status code: " + jqxhr.status + ", Request Failed: " + err);
+                });
+            }
+        </script>
+        <script type="text/js-render" id="question">
+            <div class="question">
+                <p>{{}}</p>
+
+            </div>
+        </script>
+    </body>
+</html>
