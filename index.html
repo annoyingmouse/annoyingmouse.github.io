@@ -74,7 +74,7 @@
                                     $.each(data.feed.entry, function(k, v){
                                         var comment = {};
                                         comment.postId = parseInt(v.gsx$postid.$t, 10);
-                                        comment.content = Base64.decode(v.gsx$what.$t);
+                                        comment.content = converter.makeHtml(v.gsx$what.$t);
                                         comment.date = v.gsx$timestamp.$t;
                                         comment.pubdate = createDateStamp(v.gsx$timestamp.$t);
                                         comment.who = v.gsx$who.$t;
