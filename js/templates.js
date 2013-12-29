@@ -3,7 +3,7 @@ $.templates({
         <article data-id="{{>id}}" class="post">\
             <header>\
                 <h2><a name="{{>id}}">{{>title}}</a></h2>\
-                <p>Published: <time pubdate="{{>pubdate}}">{{>date}}</time></p>\
+                <p>Published: <time datetime="{{>pubdate}}">{{>date}}</time></p>\
             </header>\
             {{:content}}\
             <section class="comments">\
@@ -58,7 +58,7 @@ $.templates({
             <header>\
                 <h4><a name="{{:who}}">{{>who}}</a></h4>\
                 <img src="https://www.gravatar.com/avatar/{{:icon}}?s=50" alt="icon for {{:who}}"/>\
-                <p>Published: <time pubdate="{{>pubdate}}">{{>date}}</time></p>\
+                <p>Published: <time datetime="{{>pubdate}}">{{>date}}</time></p>\
             </header>\
             {{:content}}\
         </article>\
