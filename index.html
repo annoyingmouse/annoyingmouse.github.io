@@ -70,6 +70,9 @@
                             addPostLinks(k, post.id, post.title);
                         });
                         $(".form-horizontal").hide();
+                        $("pre code").each(function(i, e) {
+                            hljs.highlightBlock(e)
+                        });
                         $.ajax({
                             dataType: "json",
                             url: "https://spreadsheets.google.com/feeds/list/0AiRgQIhodQXfdGZ5OV9INlNRME9YUnc2VUhmRGtPaVE/ocy/public/values?alt=json",
@@ -99,7 +102,6 @@
                                 }
                             }
                         });
-                        $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
                     }
                 });
             });
