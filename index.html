@@ -70,9 +70,6 @@
                             addPostLinks(k, post.id, post.title);
                         });
                         $(".form-horizontal").hide();
-                        $("pre code").each(function(i, e) {
-                            hljs.highlightBlock(e)
-                        });
                         $.ajax({
                             dataType: "json",
                             url: "https://spreadsheets.google.com/feeds/list/0AiRgQIhodQXfdGZ5OV9INlNRME9YUnc2VUhmRGtPaVE/ocy/public/values?alt=json",
@@ -90,7 +87,6 @@
                                     });
                                     $.each(comments, function(k,comment){
                                         $("article[data-id='"+comment.postId+"'] .comments").append($.render.addComment(comment));
-
                                     });
                                     $(".post").each(function(){
                                         var $this = $(this);
@@ -100,6 +96,9 @@
                                         }
                                     });
                                 }
+                                $("pre code").each(function(i, e) {
+                                    hljs.highlightBlock(e)
+                                });
                             }
                         });
                     }
