@@ -63,8 +63,4 @@ $.templates({
             {{:content}}\
         </article>\
     '
-
-
-
-
 });
