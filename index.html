@@ -42,6 +42,7 @@
         <script src="./js/captcha.js"></script>
         <script src="./js/showdown.js"></script>
         <script src="./js/comments.js"></script>
+        <script src="./js/templates.js"></script>
         <script>
             var posts = [];
             var comments = [];
@@ -63,7 +64,8 @@
                             posts.push(post);
                         });
                         $.each(posts, function(k, post){
-                            $("#content").append($("#addPost").render(post));
+                            //$("#content").append($("#addPost").render(post));
+                            $("#content").append($.render.addPost(post));
                             addPostLinks(k, post.id, post.title);
                         });
                         $(".form-horizontal").hide();
@@ -83,7 +85,9 @@
                                         comments.push(comment);
                                     });
                                     $.each(comments, function(k,comment){
-                                        $("article[data-id='"+comment.postId+"'] .comments").append($("#addComment").render(comment))
+                                        //$("article[data-id='"+comment.postId+"'] .comments").append($("#addComment").render(comment))
+                                        $("article[data-id='"+comment.postId+"'] .comments").append($.render.addComment(comment));
+
                                     });
                                     $(".post").each(function(){
                                         var $this = $(this);
