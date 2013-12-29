@@ -10,7 +10,7 @@
                 padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
             }
         </style>
-        <title>Drive Blog</title>
+        <title>Hyde</title>
     </head>
     <body>
         <div class="navbar navbar-fixed-top">
@@ -21,7 +21,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="https://googledrive.com/host/0ByRgQIhodQXfaVdHOElsZTV5c3c/driveblog/">Drive Blog</a>
+                    <a class="brand" href="https://googledrive.com/host/0ByRgQIhodQXfaVdHOElsZTV5c3c/driveblog/">Hyde</a>
                     <div class="nav-collapse">
                         <ul class="nav" id="siteLinks"></ul>
                     </div>
@@ -40,10 +40,13 @@
         <script src="./js/jsrender.js"></script>
         <script src="./js/functions.js"></script>
         <script src="./js/captcha.js"></script>
+        <script src="./js/showdown.js"></script>
         <script>
             var posts = [];
             var comments = [];
+            // Determine location of sheets using: https://spreadsheets.google.com/feeds/worksheets/YOUR_SPREADSHEET_ID/private/full
             $(function(){
+                var converter = new Showdown.converter();
                 $.ajax({
                     dataType: "json",
                     url: "https://spreadsheets.google.com/feeds/list/0AiRgQIhodQXfdGZ5OV9INlNRME9YUnc2VUhmRGtPaVE/od9/public/values?alt=json",
@@ -53,8 +56,7 @@
                             post.id = parseInt(v.gsx$id.$t);
                             post.date = v.gsx$date.$t;
                             post.title = v.gsx$title.$t;
-                            //post.content = Base64.decode(v.gsx$content.$t);
-                            post.content = v.gsx$content.$t;
+                            post.content = converter.makeHtml(v.gsx$content.$t);
                             post.link = encodeURI(v.gsx$title.$t);
                             post.pubdate = createDateStamp(v.gsx$date.$t);
                             posts.push(post);
@@ -66,7 +68,7 @@
                         $(".form-horizontal").hide();
                         $.ajax({
                             dataType: "json",
-                            url: "https://spreadsheets.google.com/feeds/list/0AiRgQIhodQXfdGZ5OV9INlNRME9YUnc2VUhmRGtPaVE/od8/public/values?alt=json",
+                            url: "https://spreadsheets.google.com/feeds/list/0AiRgQIhodQXfdGZ5OV9INlNRME9YUnc2VUhmRGtPaVE/ocy/public/values?alt=json",
                             success: function(data){
                                 if(!empty(data.feed.entry)){
                                     $.each(data.feed.entry, function(k, v){
@@ -113,7 +115,6 @@
                     var formId = theForm.attr("data-sortable");
                     if($('ul.sortable[data-id="' + formId + '"]').validate()){
                         if(validateEmail(theForm.find('input[type="email"]').val())){
-
                             theForm.find("textarea").val(Base64.encode(theForm.find("textarea").val()));
                         }else{
                             e.preventDefault();
