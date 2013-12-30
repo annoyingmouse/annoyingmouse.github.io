@@ -53,6 +53,7 @@
                 var converter = new Showdown.converter();
                 $.ajax({
                     dataType: "json",
+                    //https://spreadsheets.google.com/feeds/list/0AiRgQIhodQXfdGhhdTZDaEdjTy1ZV3h4T215NFRDUmc/od9/private/full
                     url: "https://spreadsheets.google.com/feeds/list/0AiRgQIhodQXfdGhhdTZDaEdjTy1ZV3h4T215NFRDUmc/od9/public/values?alt=json",
                     success: function(data){
                         $.each(data.feed.entry, function(k, v){
