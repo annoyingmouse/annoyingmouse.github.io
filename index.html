@@ -45,15 +45,20 @@
         <script src="./js/comments.js"></script>
         <script src="./js/templates.js"></script>
         <script src="./js/highlight.pack.js"></script>
+        <script src="http://spreadsheets.google.com/feeds/list/0An1-0AiRgQIhodQXfdGhhdTZDaEdjTy1ZV3h4T215NFRDUmc/1/public/values?alt=json-in-script&callback=displayJSON"></script>
         <script>
+            function displayJSON(json){
+                console.log(json);
+
+            }
             var posts = [];
             var comments = [];
+            // Determine location of sheets using: https://spreadsheets.google.com/feeds/worksheets/0AiRgQIhodQXfdGZ5OV9INlNRME9YUnc2VUhmRGtPaVE/private/full
             // Determine location of sheets using: https://spreadsheets.google.com/feeds/worksheets/0AiRgQIhodQXfdGhhdTZDaEdjTy1ZV3h4T215NFRDUmc/private/full
             $(function(){
                 var converter = new Showdown.converter();
                 $.ajax({
                     dataType: "json",
-                    //https://spreadsheets.google.com/feeds/list/0AiRgQIhodQXfdGhhdTZDaEdjTy1ZV3h4T215NFRDUmc/od9/private/full
                     url: "https://spreadsheets.google.com/feeds/list/0AiRgQIhodQXfdGhhdTZDaEdjTy1ZV3h4T215NFRDUmc/od9/public/values?alt=json",
                     success: function(data){
                         $.each(data.feed.entry, function(k, v){
