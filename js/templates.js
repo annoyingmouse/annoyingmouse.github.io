@@ -11,7 +11,7 @@ $.templates({
             </section>\
             <section class="newComment">\
                 <h3 class="showCommentArea">New Comment</h3>\
-                <form action="https://docs.google.com/forms/d/1YNJnVEo2lnle0mCbjOhiLQi4SQ4X4sEKhVgKGyRLMvE/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;" class="form-horizontal" data-sortable="{{>id}}">\
+                <form action="https://docs.google.com/forms/d/1GvVem1niUgdi3j-TAKbcuAI8L7Lc6YteTdwXKx9lDVc/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;" class="form-horizontal" data-sortable="{{>id}}">\
                     <fieldset>\
                         <legend>Your Comment</legend>\
                         <input type="hidden" name="entry.1732417772" value="{{>id}}"/>\

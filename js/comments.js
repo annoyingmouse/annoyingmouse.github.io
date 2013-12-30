@@ -18,7 +18,7 @@ $(function(){
             var formId = theForm.attr("data-sortable");
             if($('ul.sortable[data-id="' + formId + '"]').validate()){
                 if(validateEmail(theForm.find('input[type="email"]').val())){
-                    theForm.find("textarea").val(Base64.encode(theForm.find("textarea").val()));
+                    theForm.find("textarea").val(theForm.find("textarea").val());
                 }else{
                     e.preventDefault();
                     alert("Please Provide a valid email address!");
@@ -29,8 +29,4 @@ $(function(){
             }
         });
 });
-function validateEmail(email) {
-    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
-}
 

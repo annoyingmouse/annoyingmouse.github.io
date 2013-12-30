@@ -31,7 +31,7 @@
         </div>
         <div class="container">
             <script type="text/javascript">var submitted=false;</script>
-            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='https://googledrive.com/host/0ByRgQIhodQXfaVdHOElsZTV5c3c/driveblog/';}"></iframe>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='http://annoyingmouse.github.io/';}"></iframe>
             <section id="content"></section>
         </div>
         <script src="./js/jquery.js"></script>
@@ -48,12 +48,12 @@
         <script>
             var posts = [];
             var comments = [];
-            // Determine location of sheets using: https://spreadsheets.google.com/feeds/worksheets/YOUR_SPREADSHEET_ID/private/full
+            // Determine location of sheets using: https://spreadsheets.google.com/feeds/worksheets/0AiRgQIhodQXfdGhhdTZDaEdjTy1ZV3h4T215NFRDUmc/private/full
             $(function(){
                 var converter = new Showdown.converter();
                 $.ajax({
                     dataType: "json",
-                    url: "https://spreadsheets.google.com/feeds/list/0AiRgQIhodQXfdGZ5OV9INlNRME9YUnc2VUhmRGtPaVE/od9/public/values?alt=json",
+                    url: "https://spreadsheets.google.com/feeds/list/0AiRgQIhodQXfdGhhdTZDaEdjTy1ZV3h4T215NFRDUmc/od9/public/values?alt=json",
                     success: function(data){
                         $.each(data.feed.entry, function(k, v){
                             var post = {};
@@ -72,7 +72,7 @@
                         $(".form-horizontal").hide();
                         $.ajax({
                             dataType: "json",
-                            url: "https://spreadsheets.google.com/feeds/list/0AiRgQIhodQXfdGZ5OV9INlNRME9YUnc2VUhmRGtPaVE/ocy/public/values?alt=json",
+                            url: "https://spreadsheets.google.com/feeds/list/0AiRgQIhodQXfdGhhdTZDaEdjTy1ZV3h4T215NFRDUmc/ocy/public/values?alt=json",
                             success: function(data){
                                 if(!empty(data.feed.entry)){
                                     $.each(data.feed.entry, function(k, v){
