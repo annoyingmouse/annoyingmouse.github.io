@@ -68,7 +68,7 @@
                 $(".form-horizontal").hide();
                 $.ajax({
                     dataType: "json",
-                    url: "https://spreadsheets.google.com/feeds/list/0AiRgQIhodQXfdGhhdTZDaEdjTy1ZV3h4T215NFRDUmc/ocy/public/values?alt=json",
+                    url: "https://spreadsheets.google.com/feeds/list/0AiRgQIhodQXfdGhhdTZDaEdjTy1ZV3h4T215NFRDUmc/od2/public/values?alt=json",
                     success: function(data){
                         if(!empty(data.feed.entry)){
                             $.each(data.feed.entry, function(k, v){
