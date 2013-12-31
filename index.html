@@ -12,6 +12,7 @@
             }
         </style>
         <title>Hyde</title>
+        <script type="text/javascript">var submitted=false;</script>
     </head>
     <body>
         <div class="navbar navbar-fixed-top">
@@ -29,9 +30,8 @@
                 </div>
             </div>
         </div>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='http://annoyingmouse.github.io/';}"></iframe>
         <div class="container">
-            <script type="text/javascript">var submitted=false;</script>
-            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='http://annoyingmouse.github.io/';}"></iframe>
             <section id="content"></section>
         </div>
         <script src="./js/jquery.js"></script>
