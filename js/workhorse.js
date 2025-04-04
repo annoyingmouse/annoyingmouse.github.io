@@ -13,18 +13,8 @@ const getPosts = async () => {
   return posts;
 };
 
-const getComments = async () => {
-  const commentsParser = new PublicGoogleSheetsParser(sheetId, {
-    sheetName: "comments",
-    useFormat: true,
-  });
-  const comments = await commentsParser.parse();
-  return comments;
-};
-
 (async () => {
   let posts = await getPosts();
-  let comments = await getComments();
 
   posts.forEach((post) => {
     post.content = converter.makeHtml(post.content);
@@ -48,19 +38,5 @@ const getComments = async () => {
   });
   $("pre code").each(function (i, e) {
     hljs.highlightElement(e);
-  });
-  comments.forEach((comment) => {
-    comment.content = converter.makeHtml(comment.what);
-    comment.pubdate = createDateStamp(comment.Timestamp);
-    comment.date = comment.Timestamp;
-    comment.icon = md5(comment.who);
-    comment.postId = Number(comment.postId);
-    comment.who = comment.who;
-    comment.icon = md5(comment.who);
-    comments.push(comment);
-    $(`article[data-id="${comment.postId}"] .comments`).show();
-    $(`article[data-id="${comment.postId}"] .existing_comments`).append(
-      $.render.addComment(comment),
-    );
   });
 })();
