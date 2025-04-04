@@ -1,6 +1,6 @@
 import Showdown from "https://cdn.skypack.dev/showdown";
 
-import { PublicGoogleSheetsParser } from "https://cdn.skypack.dev/public-google-sheets-parser";
+import PublicGoogleSheetsParser from "https://cdn.skypack.dev/public-google-sheets-parser";
 
 const sheetId = "0AiRgQIhodQXfdGhhdTZDaEdjTy1ZV3h4T215NFRDUmc";
 const converter = new Showdown.Converter();
