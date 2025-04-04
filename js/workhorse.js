@@ -1,4 +1,5 @@
 import Showdown from "https://cdn.skypack.dev/showdown";
+import { createDateStamp, md5 } from "./functions.js";
 
 const sheetId = "0AiRgQIhodQXfdGhhdTZDaEdjTy1ZV3h4T215NFRDUmc";
 const converter = new Showdown.Converter();
@@ -9,7 +10,6 @@ const getPosts = async () => {
     useFormat: true,
   });
   const posts = await postsParser.parse();
-  console.log(posts);
   return posts;
 };
 
@@ -19,7 +19,6 @@ const getComments = async () => {
     useFormat: true,
   });
   const comments = await commentsParser.parse();
-  console.log(comments);
   return comments;
 };
 

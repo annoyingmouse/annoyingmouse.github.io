@@ -283,7 +283,7 @@ function datestamp(date) {
   return tokens[0].join("-") + "T" + tokens[1].join(":") + "Z";
 }
 
-function createDateStamp(dateString) {
+export const createDateStamp = (dateString) => {
   return datestamp(
     new Date(
       dateString.split("/")[2].split(" ")[0],
@@ -294,7 +294,7 @@ function createDateStamp(dateString) {
       dateString.split("/")[2].split(":")[2],
     ),
   );
-}
+};
 
 function addPostLinks(k, link, title) {
   if (k == 0) {
@@ -340,7 +340,7 @@ function addPostLinks(k, link, title) {
   }
 }
 
-md5 = function (string) {
+export const md5 = (string) => {
   function cmn(q, a, b, x, s, t) {
     a = add32(add32(a, q), add32(x, t));
     return add32((a << s) | (a >>> (32 - s)), b);
@@ -443,7 +443,7 @@ md5 = function (string) {
   }
 
   function md51(s) {
-    txt = "";
+    let txt = "";
     var n = s.length,
       state = [1732584193, -271733879, -1732584194, 271733878],
       i;
