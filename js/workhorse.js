@@ -10,7 +10,6 @@ const getPosts = async () => {
     useFormat: true,
   });
   const posts = await postsParser.parse();
-  console.log(posts);
   return posts;
 };
 
@@ -20,7 +19,6 @@ const getComments = async () => {
     useFormat: true,
   });
   const comments = await commentsParser.parse();
-  console.log(comments);
   return comments;
 };
 
@@ -40,7 +38,7 @@ const getComments = async () => {
         img.classList.add("img-fluid");
       });
     });
-    $("#content").append(fragment.body.children);
+    $("#content").empty().append(fragment.body.children);
     $("#siteLinks").append(
       $("<li></li>", {
         class: "dropdown-item",
